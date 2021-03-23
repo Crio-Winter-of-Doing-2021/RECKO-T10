@@ -23,5 +23,6 @@ schema_view = get_swagger_view(title='Financial Application')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('services.urls')),
-     path('', include('users.urls')),
+    path('', include('users.urls')),
+    path('', include('quickbooks.urls')),
 ]

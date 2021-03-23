@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_registration',
     'users',
-    'services'
+    'services',
+    'quickbooks'
 ]
 
 MIDDLEWARE = [
