@@ -51,3 +51,42 @@ class AuthViewSet(viewsets.GenericViewSet):
         if self.action in self.serializer_classes.keys():
             return self.serializer_classes[self.action]
         return super().get_serializer_class()
+
+
+
+class UserViewSet(viewsets.GenericViewSet):
+    permission_classes = [AllowAny, ]
+    serializer_class = serializers.EmptySerializer
+    serializer_classes = {
+        'allUsers':serializers.UserDetailsSerializer,
+    }
+
+    @action(methods=['GET'], detail=False, permission_classes=[IsAuthenticated, ])
+    def allUsers(self, request):
+        queryset = User.objects.exclude(email=request.user.email)
+        serializer = serializers.UserDetailsSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
+    @action(methods=['PATCH'], detail=False, permission_classes=[IsAuthenticated, ])
+    def privilegeAuth(self, request):
+        queryset = User.objects.filter(uid=request.data['uid']).first()
+        currentUser = User.objects.get(email=request.user.email)
+        if currentUser.adminPrivilege == False:
+            return Response({"detail":"You cannot grant or revoke privilege!!You need admin privilege!"})
+        serializer = serializers.UserDetailsSerializer(queryset, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+    
+
+    def get_serializer_class(self):
+        if not isinstance(self.serializer_classes, dict):
+            raise ImproperlyConfigured("serializer_classes should be a dict mapping.")
+
+        if self.action in self.serializer_classes.keys():
+            return self.serializer_classes[self.action]
+        return super().get_serializer_class()

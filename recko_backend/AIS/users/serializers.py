@@ -46,3 +46,9 @@ class UserRegisterSerializer(serializers.ModelSerializer):
     def validate_password(self, value):
         password_validation.validate_password(value)
         return value
+
+
+class UserDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('uid', 'email', 'name', 'adminPrivilege')
