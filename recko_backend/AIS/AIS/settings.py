@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'rest_registration',
     'users',
     'services',
-    'quickbooks'
+    'quickbooks',
+    'xeroApp'
 ]
 
 MIDDLEWARE = [

@@ -25,4 +25,5 @@ urlpatterns = [
     path('', include('services.urls')),
     path('', include('users.urls')),
     path('', include('quickbooks.urls')),
+    path('', include('xeroApp.urls')),
 ]
