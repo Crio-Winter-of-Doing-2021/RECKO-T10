@@ -136,28 +136,29 @@
               </li-->
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'index' %}">Services
-                  <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'index' %}">About
-                  <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'index' %}">Clients
-                  <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'index' %}">Contact
-                  <span class="sr-only">(current)</span>
                 </a>
               </li>
 
               <li class="nav-item active" id="admin" style="display:none;">
-                <a class="nav-link" href="{% url 'index' %}">Admin Panel
-                  <span class="sr-only">(current)</span>
+                <a class="nav-link" href="adminFunctionalities.html">Admin Panel
+                </a>
+              </li>
+
+
+              <li class="nav-item active"  id="logout" name="logout">
+                <a class="nav-link" onclick="logout()" style="cursor: pointer;">Logout 
                 </a>
               </li>
           
@@ -201,7 +202,7 @@
 
      
 
-        <h1  style="font-weight: bolder;color:rgb(15, 9, 1);text-align: center;margin-top: 20px;"> Transactions </h1>
+        <h1  style="font-weight: bolder;color:rgb(15, 9, 1);text-align: center;margin-top: 20px;">Transaction Dashboard</h1>
 
         <div id="container" style="width:100%; height:400px;"></div>
         <!-- Transactions -->
