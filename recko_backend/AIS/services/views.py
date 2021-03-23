@@ -34,6 +34,24 @@ from .xero_helper import constructXeroUrl, XeroRefreshToken, XeroTenants,xeroDat
 
 from .models import Accounts
 
+
+
+# Create your views here.
+from django.contrib.auth import get_user_model,logout
+from django.core.exceptions import ImproperlyConfigured
+from rest_framework import viewsets, status
+from rest_framework.decorators import action
+from rest_framework.permissions import AllowAny,IsAuthenticated
+from rest_framework.response import Response
+
+from . import serializers
+from users.utils import get_and_authenticate_user,create_user_account
+from users.models import CustomUser
+from datetime import date
+
+
+User = get_user_model()
+
 ############################     QUICKBOOKS CREDENTIALS     ############################
 
 client_id1 = "AB1CT9l9mtRkuGnS9w9hASGJtnHTL0JhDggPIPM3gJy2W6gQAy"
@@ -179,23 +197,19 @@ class TransactionViewSet(viewsets.GenericViewSet):
     queryset=''
 
     @action(methods=['GET'], detail=False, permission_classes=[
-        AllowAny,
+        IsAuthenticated,
     ])
     def transactions(self, request):
         #returns data from our database
         queryset=Accounts.objects.all()
         serializer=DataSerializer(queryset,many=True)
-        #if serializer.is_valid():
         return Response(serializer.data,status=status.HTTP_200_OK)
-        #else:
-        #    return Response(serializer.errors,status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        #return HttpResponse("Xero Callback1")
 
     @action(methods=['POST'], detail=False, permission_classes=[
-        AllowAny,
+        IsAuthenticated,
     ])
     def filterByDate(self, request):
-        #pass date range and handle edge cases
+        
         startDate=request.data['startDate']
         endDate=request.data['endDate']
         if startDate > endDate:
@@ -209,19 +223,17 @@ class TransactionViewSet(viewsets.GenericViewSet):
 
         queryset=Accounts.objects.filter(date__range=[startDate,endDate])
         serializer=DataSerializer(queryset,many=True)
-        #if serializer.is_valid():
+        
         if len(serializer.data)==0:
             return Response({"message":"No transaction records found"},status=status.HTTP_404_NOT_FOUND)
         return Response(serializer.data,status.HTTP_200_OK)
-        #else:
-        #    Response(serializer.errors,status=status.HTTP_500_INTERNAL_SERVER_ERROR)       
-        #return HttpResponse("Xero Callback2")
+        
 
     @action(methods=['POST'], detail=False, permission_classes=[
         AllowAny,
     ])
     def filterByType(self, request):
-        #pass account type and handle invalid/wrong cases
+        
         accType=request.data['type']
         
 
@@ -230,17 +242,14 @@ class TransactionViewSet(viewsets.GenericViewSet):
 
         queryset=Accounts.objects.filter(accountType=accType)
         serializer=DataSerializer(queryset,many=True)
-        #if serializer.is_valid():
+        
         return Response(serializer.data,status.HTTP_200_OK)
-        #else:
-        #    Response(serializer.errors,status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        #return HttpResponse("Xero Callback3")
+        
 
     @action(methods=['POST'], detail=False, permission_classes=[
         AllowAny,
     ])
     def filterByAccName(self, request):
-        #pass account name and handle not found account name case
         accname=request.data['accountName']
 
         if accname is None or len(accname) == 0:
@@ -248,13 +257,11 @@ class TransactionViewSet(viewsets.GenericViewSet):
 
         queryset=Accounts.objects.filter(accountName=accname)
         serializer=DataSerializer(queryset,many=True)
-        #if serializer.is_valid():
+        
         if len(serializer.data)==0:
             return Response({"message":"No matching account name found"},status=status.HTTP_404_NOT_FOUND)
         return Response(serializer.data,status.HTTP_200_OK)
-        #else:
-        #    Response(serializer.errors,status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        #return HttpResponse("Xero Callback4")
+        
 
     def get_serializer_class(self):
         if not isinstance(self.serializer_classes, dict):
