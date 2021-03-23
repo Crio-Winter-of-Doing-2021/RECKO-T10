@@ -1,0 +1,161 @@
+2021.03.08 11:49:31 LOG5[ui]: stunnel 5.56 on x86_64-pc-linux-gnu platform
+2021.03.08 11:49:31 LOG5[ui]: Compiled with OpenSSL 1.1.1c  28 May 2019
+2021.03.08 11:49:31 LOG5[ui]: Running  with OpenSSL 1.1.1f  31 Mar 2020
+2021.03.08 11:49:31 LOG5[ui]: Threading:PTHREAD Sockets:POLL,IPv6,SYSTEMD TLS:ENGINE,FIPS,OCSP,PSK,SNI Auth:LIBWRAP
+2021.03.08 11:49:31 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 11:49:31 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 11:49:31 LOG5[ui]: FIPS mode disabled
+2021.03.08 11:49:31 LOG5[ui]: Configuration successful
+2021.03.08 11:49:31 LOG5[ui]: Binding service [https] to :::8000: Address already in use (98)
+2021.03.08 11:51:40 LOG5[ui]: Terminated
+2021.03.08 11:51:40 LOG5[ui]: Terminating 1 service thread(s)
+2021.03.08 11:51:40 LOG5[ui]: Service threads terminated
+2021.03.08 11:52:35 LOG5[ui]: stunnel 5.56 on x86_64-pc-linux-gnu platform
+2021.03.08 11:52:35 LOG5[ui]: Compiled with OpenSSL 1.1.1c  28 May 2019
+2021.03.08 11:52:35 LOG5[ui]: Running  with OpenSSL 1.1.1f  31 Mar 2020
+2021.03.08 11:52:35 LOG5[ui]: Threading:PTHREAD Sockets:POLL,IPv6,SYSTEMD TLS:ENGINE,FIPS,OCSP,PSK,SNI Auth:LIBWRAP
+2021.03.08 11:52:35 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 11:52:35 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 11:52:35 LOG5[ui]: FIPS mode disabled
+2021.03.08 11:52:35 LOG5[ui]: Configuration successful
+2021.03.08 11:52:35 LOG5[ui]: Binding service [https] to :::8000: Address already in use (98)
+2021.03.08 11:53:33 LOG5[ui]: stunnel 5.56 on x86_64-pc-linux-gnu platform
+2021.03.08 11:53:33 LOG5[ui]: Compiled with OpenSSL 1.1.1c  28 May 2019
+2021.03.08 11:53:33 LOG5[ui]: Running  with OpenSSL 1.1.1f  31 Mar 2020
+2021.03.08 11:53:33 LOG5[ui]: Threading:PTHREAD Sockets:POLL,IPv6,SYSTEMD TLS:ENGINE,FIPS,OCSP,PSK,SNI Auth:LIBWRAP
+2021.03.08 11:53:33 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 11:53:33 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 11:53:33 LOG5[ui]: FIPS mode disabled
+2021.03.08 11:53:33 LOG5[ui]: Configuration successful
+2021.03.08 11:53:33 LOG5[ui]: Binding service [https] to :::8443: Address already in use (98)
+2021.03.08 11:54:35 LOG5[ui]: Terminated
+2021.03.08 11:54:35 LOG5[ui]: Terminating 1 service thread(s)
+2021.03.08 11:54:35 LOG5[ui]: Service threads terminated
+2021.03.08 11:54:41 LOG5[ui]: Terminated
+2021.03.08 11:54:41 LOG5[ui]: Terminating 1 service thread(s)
+2021.03.08 11:54:41 LOG5[ui]: Service threads terminated
+2021.03.08 11:56:14 LOG5[ui]: stunnel 5.56 on x86_64-pc-linux-gnu platform
+2021.03.08 11:56:14 LOG5[ui]: Compiled with OpenSSL 1.1.1c  28 May 2019
+2021.03.08 11:56:14 LOG5[ui]: Running  with OpenSSL 1.1.1f  31 Mar 2020
+2021.03.08 11:56:14 LOG5[ui]: Threading:PTHREAD Sockets:POLL,IPv6,SYSTEMD TLS:ENGINE,FIPS,OCSP,PSK,SNI Auth:LIBWRAP
+2021.03.08 11:56:14 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 11:56:14 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 11:56:14 LOG5[ui]: FIPS mode disabled
+2021.03.08 11:56:14 LOG5[ui]: Configuration successful
+2021.03.08 11:56:14 LOG5[ui]: Binding service [https] to :::8443: Address already in use (98)
+2021.03.08 12:01:30 LOG5[ui]: Terminated
+2021.03.08 12:01:30 LOG5[ui]: Terminating 1 service thread(s)
+2021.03.08 12:01:30 LOG5[ui]: Service threads terminated
+2021.03.08 12:01:45 LOG5[ui]: stunnel 5.56 on x86_64-pc-linux-gnu platform
+2021.03.08 12:01:45 LOG5[ui]: Compiled with OpenSSL 1.1.1c  28 May 2019
+2021.03.08 12:01:45 LOG5[ui]: Running  with OpenSSL 1.1.1f  31 Mar 2020
+2021.03.08 12:01:45 LOG5[ui]: Threading:PTHREAD Sockets:POLL,IPv6,SYSTEMD TLS:ENGINE,FIPS,OCSP,PSK,SNI Auth:LIBWRAP
+2021.03.08 12:01:45 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 12:01:45 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 12:01:45 LOG5[ui]: FIPS mode disabled
+2021.03.08 12:01:45 LOG5[ui]: Configuration successful
+2021.03.08 12:01:45 LOG5[ui]: Binding service [https] to :::8443: Address already in use (98)
+2021.03.08 12:03:10 LOG5[0]: Service [https] accepted connection from 127.0.0.1:38166
+2021.03.08 12:03:10 LOG5[1]: Service [https] accepted connection from 127.0.0.1:38170
+2021.03.08 12:03:10 LOG3[1]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:10 LOG3[0]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:10 LOG5[1]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:10 LOG5[0]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:10 LOG5[2]: Service [https] accepted connection from 127.0.0.1:38174
+2021.03.08 12:03:10 LOG3[2]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:10 LOG5[2]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:10 LOG5[3]: Service [https] accepted connection from 127.0.0.1:38178
+2021.03.08 12:03:10 LOG3[3]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:10 LOG5[3]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:11 LOG5[4]: Service [https] accepted connection from 127.0.0.1:38184
+2021.03.08 12:03:11 LOG5[5]: Service [https] accepted connection from 127.0.0.1:38188
+2021.03.08 12:03:11 LOG3[4]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:11 LOG5[4]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:11 LOG3[5]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:11 LOG5[5]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:11 LOG5[6]: Service [https] accepted connection from 127.0.0.1:38192
+2021.03.08 12:03:11 LOG3[6]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:11 LOG5[7]: Service [https] accepted connection from 127.0.0.1:38196
+2021.03.08 12:03:11 LOG5[6]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:11 LOG3[7]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:11 LOG5[7]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:11 LOG5[8]: Service [https] accepted connection from 127.0.0.1:38200
+2021.03.08 12:03:11 LOG3[8]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:11 LOG5[8]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:11 LOG5[9]: Service [https] accepted connection from 127.0.0.1:38204
+2021.03.08 12:03:11 LOG3[9]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:11 LOG5[9]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:18 LOG5[10]: Service [https] accepted connection from 127.0.0.1:38244
+2021.03.08 12:03:18 LOG5[11]: Service [https] accepted connection from 127.0.0.1:38248
+2021.03.08 12:03:18 LOG3[11]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:18 LOG3[10]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:18 LOG5[11]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:18 LOG5[10]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:18 LOG5[12]: Service [https] accepted connection from 127.0.0.1:38252
+2021.03.08 12:03:18 LOG3[12]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:18 LOG5[12]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:18 LOG5[13]: Service [https] accepted connection from 127.0.0.1:38256
+2021.03.08 12:03:18 LOG3[13]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:18 LOG5[13]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:19 LOG5[14]: Service [https] accepted connection from 127.0.0.1:38260
+2021.03.08 12:03:19 LOG5[15]: Service [https] accepted connection from 127.0.0.1:38264
+2021.03.08 12:03:19 LOG3[15]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:19 LOG3[14]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:19 LOG5[15]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:19 LOG5[14]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:19 LOG5[16]: Service [https] accepted connection from 127.0.0.1:38268
+2021.03.08 12:03:19 LOG3[16]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:19 LOG5[16]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:19 LOG5[17]: Service [https] accepted connection from 127.0.0.1:38272
+2021.03.08 12:03:19 LOG3[17]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:19 LOG5[17]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:19 LOG5[18]: Service [https] accepted connection from 127.0.0.1:38276
+2021.03.08 12:03:19 LOG3[18]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:19 LOG5[18]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:03:19 LOG5[19]: Service [https] accepted connection from 127.0.0.1:38280
+2021.03.08 12:03:19 LOG3[19]: SSL_accept: ../ssl/statem/statem_lib.c:109: error:141FC044:SSL routines:tls_setup_handshake:internal error
+2021.03.08 12:03:19 LOG5[19]: Connection reset: 0 byte(s) sent to TLS, 0 byte(s) sent to socket
+2021.03.08 12:06:06 LOG5[ui]: Terminated
+2021.03.08 12:06:06 LOG5[ui]: Terminating 1 service thread(s)
+2021.03.08 12:06:06 LOG5[ui]: Service threads terminated
+2021.03.08 12:06:35 LOG5[ui]: stunnel 5.56 on x86_64-pc-linux-gnu platform
+2021.03.08 12:06:35 LOG5[ui]: Compiled with OpenSSL 1.1.1c  28 May 2019
+2021.03.08 12:06:35 LOG5[ui]: Running  with OpenSSL 1.1.1f  31 Mar 2020
+2021.03.08 12:06:35 LOG5[ui]: Threading:PTHREAD Sockets:POLL,IPv6,SYSTEMD TLS:ENGINE,FIPS,OCSP,PSK,SNI Auth:LIBWRAP
+2021.03.08 12:06:35 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 12:06:35 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 12:06:35 LOG5[ui]: FIPS mode disabled
+2021.03.08 12:06:35 LOG5[ui]: Configuration successful
+2021.03.08 12:06:35 LOG5[ui]: Binding service [https] to :::8443: Address already in use (98)
+2021.03.08 12:08:27 LOG5[ui]: Terminated
+2021.03.08 12:08:27 LOG5[ui]: Terminating 1 service thread(s)
+2021.03.08 12:08:27 LOG5[ui]: Service threads terminated
+2021.03.08 12:09:36 LOG5[ui]: stunnel 5.56 on x86_64-pc-linux-gnu platform
+2021.03.08 12:09:36 LOG5[ui]: Compiled with OpenSSL 1.1.1c  28 May 2019
+2021.03.08 12:09:36 LOG5[ui]: Running  with OpenSSL 1.1.1f  31 Mar 2020
+2021.03.08 12:09:36 LOG5[ui]: Threading:PTHREAD Sockets:POLL,IPv6,SYSTEMD TLS:ENGINE,FIPS,OCSP,PSK,SNI Auth:LIBWRAP
+2021.03.08 12:09:36 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 12:09:36 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 12:09:36 LOG5[ui]: FIPS mode disabled
+2021.03.08 12:09:36 LOG5[ui]: Configuration successful
+2021.03.08 12:09:36 LOG5[ui]: Binding service [https] to :::8443: Address already in use (98)
+2021.03.08 12:10:30 LOG5[ui]: Terminated
+2021.03.08 12:10:30 LOG5[ui]: Terminating 1 service thread(s)
+2021.03.08 12:10:30 LOG5[ui]: Service threads terminated
+2021.03.08 12:12:02 LOG5[ui]: stunnel 5.56 on x86_64-pc-linux-gnu platform
+2021.03.08 12:12:02 LOG5[ui]: Compiled with OpenSSL 1.1.1c  28 May 2019
+2021.03.08 12:12:02 LOG5[ui]: Running  with OpenSSL 1.1.1f  31 Mar 2020
+2021.03.08 12:12:02 LOG5[ui]: Threading:PTHREAD Sockets:POLL,IPv6,SYSTEMD TLS:ENGINE,FIPS,OCSP,PSK,SNI Auth:LIBWRAP
+2021.03.08 12:12:02 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 12:12:02 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 12:12:02 LOG5[ui]: FIPS mode disabled
+2021.03.08 12:12:02 LOG5[ui]: Configuration successful
+2021.03.08 12:12:02 LOG5[ui]: Binding service [https] to :::8443: Address already in use (98)
+2021.03.08 13:58:34 LOG5[ui]: Reading configuration from file /home/patralekha/Desktop/quickbooks_sample/AIS/stunnel/dev_https
+2021.03.08 13:58:34 LOG5[ui]: UTF-8 byte order mark not detected
+2021.03.08 13:58:34 LOG5[ui]: FIPS mode disabled
+2021.03.08 13:58:34 LOG5[ui]: Configuration successful
+2021.03.08 13:58:34 LOG5[ui]: Binding service [https] to :::8443: Address already in use (98)
+2021.03.08 14:00:02 LOG5[ui]: Terminated
+2021.03.08 14:00:02 LOG5[ui]: Terminating 1 service thread(s)
+2021.03.08 14:00:02 LOG5[ui]: Service threads terminated
