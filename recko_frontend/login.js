@@ -1,4 +1,4 @@
-
+var auth_token;
   $(document).ready(function () {
     $("#registerForm").submit(function (event) {
       /* stop form from submitting normally */
@@ -94,6 +94,8 @@
             } else {
                 console.log(responseData);
                 //set name ,adminPrivilege  in windows.sessionStorage()
+                auth_token = responseData["auth_token"];
+                localStorage.setItem('auth',auth_token);
                localStorage.setItem('name',responseData['name']);
                localStorage.setItem('adminPrivilege',responseData['adminPrivilege']);
                window.location.href="index.html";

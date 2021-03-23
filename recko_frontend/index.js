@@ -4,11 +4,34 @@ $(document).ready(function () {
    }
 });
 
+
+function logout(){
+  $.ajax({
+    type: "POST",
+    url: "http://127.0.0.1:8000/logout/",
+    success: function (data) {
+      localStorage.removeItem('name');
+      localStorage.removeItem('adminPrivilege');
+      localStorage.removeItem('auth','');
+      window.location.href="login.html";
+ 
+    },
+    error: function (response) {
+      alert(response["statusText"]);
+    },
+  });
+}
+
+
+
 function loadMemes() {
-   
+  var token="Token ";
+  var token1=localStorage.getItem('auth');
+  var authorization=token.concat(token1);
     $.ajax({
       type: "GET",
       url: "http://127.0.0.1:8000/transactions/",
+      headers: {"Authorization": authorization},
       success: function (data) {
         
         $("#transactionsTable").dataTable().fnDestroy();
