@@ -2,6 +2,32 @@ $(document).ready(function () {
    if(localStorage.getItem('adminPrivilege')=="true"){
      document.getElementById("admin").style.display="block";
    }
+
+   /*
+   $('#transactionsTable thead th').each( function () {
+    var title = $(this).text();
+    $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+} );
+
+// DataTable
+var table = $('#transactionsTable').DataTable({
+  initComplete: function () {
+      // Apply the search
+      this.api().columns().every( function () {
+          var that = this;
+
+          $( 'input', this.header() ).on( 'keyup change clear', function () {
+              if ( that.search() !== this.value ) {
+                  that
+                      .search( this.value )
+                      .draw();
+              }
+          } );
+      } );
+  }
+});
+*/
+
 });
 
 
@@ -49,9 +75,10 @@ function loadMemes() {
           }
       } );
   } );
+ 
   var table = $('#transactionsTable').DataTable({
           orderCellsTop: true,
-          fixedHeader: true,
+          fixedHeader: false,
             data: data,  // Get the data object
             columns: [
                 { data: 'accountId' },

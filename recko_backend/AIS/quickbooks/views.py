@@ -95,20 +95,38 @@ def fetchQboData(request):
         auth_client.refresh()
 
     #call construct url function in quickbooks_helper.py
-    response = constructUrl(auth_client.access_token, auth_client.realm_id)
-    r1=response.json()
+    #use for loop for pagination and sleep for timeouts and rate limit
+    startposition=1
+    maxresults=1000
+    journalsFetched=0
+    while True:
+        response = constructUrl(auth_client.access_token, auth_client.realm_id,startposition,maxresults)
+        r1=response.json()
 
-    rt_file = open('quickbooks_response.json', 'w')
-    rt_file.write(response.text)
-    rt_file.close()
+        if response.status_code==429 or response.status_code==408:
+            time.sleep(60)
+            continue
+
+        if not bool(r1['QueryResponse']):
+            break
+        else:
+            journalsFetched += len(r1['QueryResponse']['JournalEntry'])
+
+        rt_file = open('quickbooks_response.json', 'a')
+        rt_file.write(response.text)
+        rt_file.close()
+
+        serializer=QuickBooksSerializer(data=r1)
+        if serializer.is_valid():
+            quickbooksDataEntry(r1)
+        else:
+            print(serializer.errors)
+        
+        startposition=startposition+maxresults
+    return HttpResponse(journalsFetched)
+
 
                 
 
-    serializer=QuickBooksSerializer(data=r1)
-    if serializer.is_valid():
-        quickbooksDataEntry(r1)
-        return HttpResponse(response.text)
-    else:
-        print(serializer.errors)
-        return HttpResponse(serializer.errors)
+    
     

@@ -18,7 +18,7 @@ import json
 from dateutil.parser import parse
 
 from django.core.cache import cache
-from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1,XNestedSerializer3
+from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1, XNestedSerializer3
 
 from services.models import Accounts
 from django.core.management.base import BaseCommand
@@ -69,12 +69,13 @@ def XeroTenants(access_token):
     return json_dict['tenantId']
 
 
-def constructXeroUrl(access_token, tid):
-    url = 'https://api.xero.com/api.xro/2.0/Journals'
+def constructXeroUrl(access_token, tid, offset):
+    url = 'https://api.xero.com/api.xro/2.0/Journals?offset='+str(offset)
     response = requests.get(url,
                             headers={
                                 'Authorization': 'Bearer ' + access_token,
                                 'Xero-Tenant-Id': tid,
+                                'Retry-After': "36000",
                                 'Accept': 'application/json'
                             })
     return response

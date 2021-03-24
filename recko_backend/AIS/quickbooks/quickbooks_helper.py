@@ -18,11 +18,11 @@ from services.models import Accounts
 from django.core.management.base import BaseCommand
 
 
-def constructUrl(token,realm_id):
+def constructUrl(token,realm_id,startposition,maxresults):
     base_url = 'https://sandbox-quickbooks.api.intuit.com'
 
-    url = '{0}/v3/company/{1}/query?query=select * from journalentry startposition 1 maxresults 5&minoversion=57'.format(
-        base_url, realm_id)
+    url = '{0}/v3/company/{1}/query?query=select * from journalentry startposition {2} maxresults {3} & minoversion=57'.format(
+        base_url, realm_id,startposition,maxresults)
     auth_header = 'Bearer {0}'.format(token)
     headers = {
         'Authorization': auth_header,
@@ -39,10 +39,8 @@ def constructUrl(token,realm_id):
 
 
 def quickbooksDataEntry(response):
-    #Accounts.objects.all().delete()
     for obj in response['QueryResponse']['JournalEntry']:
         list1 = []
-        #print("Date: ",obj['TxnDate'])
         date=obj['TxnDate']
         for journalLine in obj['Line']:
                 s1 = QNestedSerializer2(data=journalLine)

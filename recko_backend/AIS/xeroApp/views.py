@@ -9,7 +9,7 @@ from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
-from .serializers import EmptySerializer,XeroSerializer, XNestedSerializer1, XNestedSerializer3
+from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1, XNestedSerializer3
 
 from django.core.cache import cache
 from django.shortcuts import render, redirect
@@ -30,28 +30,26 @@ import schedule
 import time
 
 
-from .xero_helper import constructXeroUrl, XeroRefreshToken, XeroTenants,xeroDataEntry
+from .xero_helper import constructXeroUrl, XeroRefreshToken, XeroTenants, xeroDataEntry
 
 from services.models import Accounts
 
 
-
 # Create your views here.
-from django.contrib.auth import get_user_model,logout
+from django.contrib.auth import get_user_model, logout
 from django.core.exceptions import ImproperlyConfigured
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
-from rest_framework.permissions import AllowAny,IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
 from . import serializers
-from users.utils import get_and_authenticate_user,create_user_account
+from users.utils import get_and_authenticate_user, create_user_account
 from users.models import CustomUser
 from datetime import date
 
 
 User = get_user_model()
-
 
 
 ############################      XERO CREDENTIALS    ###################################
@@ -64,17 +62,17 @@ scope = 'offline_access accounting.journals.read'
 b64_id_secret = base64.b64encode(
     bytes(client_id + ':' + client_secret, 'utf-8')).decode('utf-8')
 
+
 #########################################################################################
 
 
-
-####################################################  XERO API CALL ################################################
+########################################  XERO API CALL #################################
 
 def xero(request):
     auth_url = ('''https://login.xero.com/identity/connect/authorize?''' +
                 '''response_type=code''' + '''&client_id=''' + client_id +
                 '''&redirect_uri=''' + redirect_url + '''&scope=''' + scope +
-                '''&state=123''')  
+                '''&state=123''')
     return redirect(auth_url)
 
 
@@ -91,7 +89,7 @@ def xero_callback(request):
             'code': auth_code,
             'redirect_uri': redirect_url
         })
-   
+
     json_response = response.json()
     print(json_response)
 
@@ -115,12 +113,22 @@ def fetchXeroData(request):
     new_tokens = XeroRefreshToken(old_refresh_token)
     xero_tenant_id = XeroTenants(new_tokens[0])
 
-    response = constructXeroUrl(new_tokens[0], xero_tenant_id)
-    r = response.json() 
+    # use for loop and record offset number,increment offset number by 100
+    offset = 0
+    journalsFetched = 0
+    while True:
+        response = constructXeroUrl(new_tokens[0], xero_tenant_id, offset)
+        r = response.json()
 
-    serializer=XeroSerializer(data=r)
-    if serializer.is_valid():
-        xeroDataEntry(r)
-        return HttpResponse(response.text)
-    else:
-        return HttpResponse(serializer.errors)
+        if len(r['Journals']) == 0:
+            break
+        else:
+            journalsFetched += len(r['Journals'])
+
+        serializer = XeroSerializer(data=r)
+        if serializer.is_valid():
+            xeroDataEntry(r)
+        else:
+            print("ERROR")
+        offset += 100
+    return HttpResponse(journalsFetched)
