@@ -1,3 +1,29 @@
+if(localStorage.getItem('auth')===null){
+  window.location.href="login.html";
+}
+var offline=false;
+
+window.addEventListener('online',connectionUpdate);
+window.addEventListener('offline',connectionUpdate);
+
+function connectionUpdate(event){
+
+if(navigator.onLine){
+ if(offline){
+  document.getElementById('connectionStatus').innerHTML="<br><span class='btn btn-outline-success'>You are back online...</div>";
+  setTimeout(function() {
+    $('#connectionStatus').fadeOut('slow');
+}, 2000);
+offline=!offline;
+ }
+}else{
+  
+  document.getElementById('connectionStatus').innerHTML="<br><span class='btn btn-outline-danger'>Oops!! You are offline!</div>";
+  offline=!offline;
+}
+
+}
+
 function grant_revoke(id,privilege){
   var access=!privilege;
   var token="Token ";
@@ -85,6 +111,7 @@ function logout(){
   function loadUsers() {
     var token="Token ";
     var token1=localStorage.getItem('auth');
+    console.log(token1);
     var authorization=token.concat(token1);
     $.ajax({
       type: "GET",
