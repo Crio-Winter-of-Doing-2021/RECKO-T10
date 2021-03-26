@@ -131,4 +131,5 @@ def fetchXeroData(request):
         else:
             print("ERROR")
         offset += 100
-    return HttpResponse(journalsFetched)
+        msg="Number of Journals Fetched:{0}\n.You can close this window now and login again!!".format(journalsFetched)
+    return HttpResponse(msg)

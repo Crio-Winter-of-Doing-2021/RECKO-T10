@@ -52,6 +52,8 @@ from datetime import date
 
 User = get_user_model()
 
+
+"""
 ############################     QUICKBOOKS CREDENTIALS     ############################
 
 client_id1 = "AB1CT9l9mtRkuGnS9w9hASGJtnHTL0JhDggPIPM3gJy2W6gQAy"
@@ -181,6 +183,8 @@ def fetchXeroData(request):
     else:
         return HttpResponse(serializer.errors)
 
+"""
+
 
 class TransactionViewSet(viewsets.GenericViewSet):
     permission_classes = [
@@ -201,7 +205,7 @@ class TransactionViewSet(viewsets.GenericViewSet):
     ])
     def transactions(self, request):
         #returns data from our database
-        queryset=Accounts.objects.all()
+        queryset=Accounts.objects.values('accountId','accountName','amount','date','accountType','providerName')
         serializer=DataSerializer(queryset,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
 

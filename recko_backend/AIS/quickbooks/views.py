@@ -64,6 +64,9 @@ scopes = [
 auth_client = AuthClient(client_id1, client_secret1, redirect_uri1,
                          environment)
 
+
+
+
 #########################################################################################
 
 #################################### QUICKBOOKS API CALL #########################################
@@ -123,7 +126,8 @@ def fetchQboData(request):
             print(serializer.errors)
         
         startposition=startposition+maxresults
-    return HttpResponse(journalsFetched)
+        msg="Number of Journals Fetched:{0}\n.You can close this window now and login again!!".format(journalsFetched)
+    return HttpResponse(msg)
 
 
                 
