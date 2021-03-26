@@ -78,6 +78,32 @@ td {
   width: 400px;
 }
 
+
+
+
+a.fa-bell {
+  position: relative;
+  font-size: 1.4em;
+  color: grey;
+  cursor: pointer;
+}
+span.fa-comment {
+  position: absolute;
+  font-size: 0.9em;
+  top: -4px;
+  color: rgb(253, 2, 2);
+  right: -4px;
+}
+span.num {
+  position: absolute;
+  font-size: 0.5em;
+  top: 0px;
+  color: rgb(8, 8, 8);
+  right: 2px;
+}
+
+
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}

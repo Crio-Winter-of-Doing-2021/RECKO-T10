@@ -32,7 +32,7 @@
   <link rel="stylesheet" href=https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.2/css/select.dataTables.min.css">
- 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -59,6 +59,29 @@ body {
 .users{
   margin-top: 40px;
 }
+
+
+a.fa-bell {
+  position: relative;
+  font-size: 1.4em;
+  color: grey;
+  cursor: pointer;
+}
+span.fa-comment {
+  position: absolute;
+  font-size: 0.9em;
+  top: -4px;
+  color: rgb(253, 2, 2);
+  right: -4px;
+}
+span.num {
+  position: absolute;
+  font-size: 0.5em;
+  top: 0px;
+  color: rgb(8, 8, 8);
+  right: 2px;
+}
+
 </style>
 
 </head>
@@ -105,6 +128,15 @@ body {
               <li class="nav-item active"  id="logout" name="logout">
                 <a class="nav-link" onclick="logout()" style="cursor: pointer;">Logout 
                 </a>
+              </li>
+
+              <li class="nav-item active"  id="notification" name="notification">
+                <a class="nav-link fa fa-bell"  style="cursor: pointer;" href="https://google.com">
+                  <div><span class="fa fa-comment"></span> 
+                  <span class="num">2</span>
+                </div>
+                </a> 
+               
               </li>
           
           

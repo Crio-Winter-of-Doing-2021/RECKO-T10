@@ -53,8 +53,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+<!--script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <script>
    window.onload=loadMemes;
 </script>
@@ -62,66 +65,6 @@
 </head>
 <body>
 
-<!--div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >Filters  &times;</a>
-  
-  <a href="#"><button class="nav-link btn btn-outline-warning" onclick="window.location.reload();">All Transactions
-</button></a>
-<a href="#"><button class="nav-link btn btn-outline-info" data-toggle="collapse" href="#datefilter" role="button" aria-expanded="false" aria-controls="datefilter">By Date
-</button></a>
-
-<div  id="datefilter" class="collapse">
-    
-        <div class="card-body">
-            <form class="card-text" id="filterByDateForm" name="filterByDateForm" method="POST">
-
-              <label style="color:beige;">Start date</label>
-              <input type="date" id="startdate" name="startdate" required>
-              <br/>
-              <label style="color:beige;">End date</label>
-              <input type="date" id="enddate" name="enddate" required> <br/><br/>
-              <input id="submit" type="submit" class="btn btn-lg btn-info" value="Filter">
-            </form>
-            
-          </div>
-</div>
-<a href="#"><button class="nav-link btn btn-outline-success" data-toggle="collapse" href="#accnamefilter" role="button" aria-expanded="false" aria-controls="accnamefilter">By Account Name
-</button></a>
-<div  id="accnamefilter" class="collapse">
-    
-        <div class="card-body">
-            <form class="card-text" method="POST" id="filterByNameForm" name="filterByNameForm">
-
-                <label style="color: beige;">Enter Account Name</label>
-                <input type="text" id="namefilter" name="namefilter" required>
-                <br/><br/>
-                <input id="submit" type="submit" class="btn btn-lg btn-success" value="Filter">
-                
-              </form> <br/>
-        </div>
-
-</div>
-<a href="#"><button class="nav-link btn btn-outline-danger" data-toggle="collapse" href="#typefilter" role="button" aria-expanded="false" aria-controls="typefilter">By Transaction Type
-</button></a>
-
-<div  id="typefilter" class="collapse">
-    
-    <div class="card-body">
-        <form class="card-text" method="POST" id="filterByTypeForm" name="filterByTypeForm">
-
-            <label style="color: beige;">Debit</label>
-            <input type="radio" id="debit" name="type" value="Debit" required>
-            <label style="color: beige;">Credit</label>
-            <input type="radio" id="credit" name="type" value="Credit" required>
-            <br/><br/>
-            <input id="submit" type="submit" class="btn btn-lg btn-danger" value="Filter">
-            
-          </form> <br/>
-    </div>
-
-</div>
-
-</div-->
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(to top, #4fb0ff, #036077)">
     <div class="container-fluid">
@@ -138,11 +81,6 @@
            
         </ul>
         <ul class="navbar-nav mx-auto">
-            <!--li class="nav-item active">
-                <a class="nav-link" href="{% url 'index' %}">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li-->
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'index' %}">Services
                 </a>
@@ -170,8 +108,15 @@
                 <a class="nav-link" onclick="logout()" style="cursor: pointer;">Logout 
                 </a>
               </li>
-          
-          
+              <li class="nav-item active"  id="notification" name="notification">
+                <a class="nav-link fa fa-bell"  style="cursor: pointer;" href="https://google.com">
+                  <div><span class="fa fa-comment"></span> 
+                  <span class="num">2</span>
+                </div>
+                </a> 
+               
+              </li>
+             
         </ul>
         <ul class="navbar-nav" style="float:right;">
             
@@ -206,14 +151,14 @@
 
       </div>
     
-      <!-- Meme Stream Column -->
+      <!-- Table Data Column -->
       <div>
 
      
 
         <h1  style="font-weight: bolder;color:rgb(15, 9, 1);text-align: center;margin-top: 20px;">Transaction Dashboard</h1>
 
-        <!--div id="container" style="width:100%; height:400px;"></div-->
+      
         <!-- Transactions -->
         <table id="transactionsTable" class="display nowrap" style="width:100%;">
             <colgroup>
@@ -231,9 +176,7 @@
                 <th>Transaction Date</th>
                 </tr>
             </thead>
-            <!--tbody id="alltransactions">
-
-            </tbody-->
+          
         </table>
         
       
