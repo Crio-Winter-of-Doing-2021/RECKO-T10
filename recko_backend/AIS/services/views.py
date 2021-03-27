@@ -64,6 +64,8 @@ class TransactionViewSet(viewsets.GenericViewSet):
         'filterByDate': EmptySerializer,
         'filterByType': EmptySerializer,
         'filterByAccName': EmptySerializer,
+        'xeroAccounts':EmptySerializer,
+        'xeroUsers':EmptySerializer
     }
 
     queryset=''
@@ -76,6 +78,11 @@ class TransactionViewSet(viewsets.GenericViewSet):
         queryset=Accounts.objects.values('accountId','accountName','amount','date','accountType','providerName')
         serializer=DataSerializer(queryset,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
+
+        
+    
+
+
 
     @action(methods=['POST'], detail=False, permission_classes=[
         IsAuthenticated,

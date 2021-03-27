@@ -131,6 +131,46 @@ def fetchQboData(request):
 
 
                 
+##########################################################################################################################
+
+############################     QUICKBOOKS FUNCTIONALITIES  ##################################
+
+
+class QFunctionsViewSet(viewsets.GenericViewSet):
+    ermission_classes = [
+        AllowAny,
+    ]
+    serializer_class = EmptySerializer
+    serializer_classes = {
+        'quickbooksAccounts':EmptySerializer,
+        'quickbooksUsers':EmptySerializer,
+    }
+
+    queryset=''
+
+    @action(methods=['GET'], detail=False, permission_classes=[
+        IsAuthenticated,
+    ])
+    def quickbooksAccounts(self, request):
+        #returns quickbooks accounts page url
+        adminPrivilege=User.objects.get(email=request.user.email).adminPrivilege
+        if adminPrivilege:
+            return Response(data={"url":"https://app.sandbox.qbo.intuit.com/app/chartofaccounts"},status=status.HTTP_200_OK)
+        else:
+            return Response({"message":"You do not have administrator privilege!"},status=status.HTTP_401_UNAUTHORIZED)
+
+    @action(methods=['GET'], detail=False, permission_classes=[
+        IsAuthenticated,
+    ])
+    
+    def quickbooksUsers(self, request):
+        #returns quickbooks users page url
+        adminPrivilege=User.objects.get(email=request.user.email).adminPrivilege
+        if adminPrivilege:
+            return Response(data={"url":"https://app.sandbox.qbo.intuit.com/app/usermgt"},status=status.HTTP_200_OK)
+        else:
+            return Response({"message":"You do not have administrator privilege"},status=status.HTTP_401_UNAUTHORIZED)
+
 
     
     

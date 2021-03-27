@@ -105,7 +105,7 @@ def xero_callback(request):
     rt_file = open('access_token.txt', 'w')
     rt_file.write(access_token)
     rt_file.close()
-    return HttpResponse("Xero Authentication Done!!!")
+    return HttpResponse("Xero Authentication Done!!! Close this page and login again!")
 
 
 def fetchXeroData(request):
@@ -133,3 +133,41 @@ def fetchXeroData(request):
         offset += 100
         msg="Number of Journals Fetched:{0}\n.You can close this window now and login again!!".format(journalsFetched)
     return HttpResponse(msg)
+
+
+
+
+class XFunctionsViewSet(viewsets.GenericViewSet):
+    permission_classes = [
+        AllowAny,
+    ]
+    serializer_class = EmptySerializer
+    serializer_classes = {
+        'xeroAccounts':EmptySerializer,
+        'xeroUsers':EmptySerializer
+    }
+
+    queryset=''
+
+
+    @action(methods=['GET'], detail=False, permission_classes=[
+        IsAuthenticated,
+    ])
+    def xeroAccounts(self, request):
+        #returns xero accounts page url
+        adminPrivilege=User.objects.get(email=request.user.email).adminPrivilege
+        if adminPrivilege:
+            return Response(data={"url":"https://go.xero.com/GeneralLedger/ChartOfAccounts.aspx"},status=status.HTTP_200_OK)
+        else:
+            return Response({"message":"You do not have administrator privilege!!"},status=status.HTTP_401_UNAUTHORIZED)
+        
+    @action(methods=['GET'], detail=False, permission_classes=[
+        IsAuthenticated,
+    ])
+    def xeroUsers(self, request):
+        #returns xero users page url
+        adminPrivilege=User.objects.get(email=request.user.email).adminPrivilege
+        if adminPrivilege:
+            return Response(data={"url":"https://go.xero.com/Settings/Users"},status=status.HTTP_200_OK)
+        else:
+            return Response({"message":"You do not have administrator privilege"},status=status.HTTP_401_UNAUTHORIZED)
