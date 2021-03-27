@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'users',
     'services',
     'quickbooks',
-    'xeroApp'
+    'xeroApp',
+    'pwa',
 ]
 
 MIDDLEWARE = [

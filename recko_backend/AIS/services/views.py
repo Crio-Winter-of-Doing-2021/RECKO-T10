@@ -80,9 +80,6 @@ class TransactionViewSet(viewsets.GenericViewSet):
         return Response(serializer.data,status=status.HTTP_200_OK)
 
         
-    
-
-
 
     @action(methods=['POST'], detail=False, permission_classes=[
         IsAuthenticated,

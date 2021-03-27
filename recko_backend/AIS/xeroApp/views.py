@@ -12,6 +12,7 @@ from rest_framework.response import Response
 from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1, XNestedSerializer3
 
 from django.core.cache import cache
+
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseServerError, HttpResponseRedirect
@@ -95,21 +96,23 @@ def xero_callback(request):
 
     refresh_token = json_response['refresh_token']
 
-    rt_file = open('refresh_token.txt', 'w')
-    rt_file.write(refresh_token)
-    rt_file.close()
+    #rt_file = open('refresh_token.txt', 'w')
+    #rt_file.write(refresh_token)
+    #rt_file.close()
+    cache.set('refresh_token',refresh_token,None)
 
     access_token = json_response['access_token']
     print(refresh_token)
 
-    rt_file = open('access_token.txt', 'w')
-    rt_file.write(access_token)
-    rt_file.close()
+    #rt_file = open('access_token.txt', 'w')
+    #rt_file.write(access_token)
+    #rt_file.close()
+    cache.set('access_token',access_token,None)
     return HttpResponse("Xero Authentication Done!!! Close this page and login again!")
 
 
 def fetchXeroData(request):
-    old_refresh_token = open('refresh_token.txt', 'r').read()
+    old_refresh_token = cache.get('refresh_token')#open('refresh_token.txt', 'r').read()
     new_tokens = XeroRefreshToken(old_refresh_token)
     xero_tenant_id = XeroTenants(new_tokens[0])
 
@@ -127,11 +130,12 @@ def fetchXeroData(request):
 
         serializer = XeroSerializer(data=r)
         if serializer.is_valid():
+            print(serializer.data)
             xeroDataEntry(r)
         else:
             print("ERROR")
         offset += 100
-        msg="Number of Journals Fetched:{0}\n.You can close this window now and login again!!".format(journalsFetched)
+    msg="You can close this window now and login again!!"
     return HttpResponse(msg)
 
 

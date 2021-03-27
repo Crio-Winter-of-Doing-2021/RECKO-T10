@@ -18,6 +18,7 @@ import json
 from dateutil.parser import parse
 
 from django.core.cache import cache
+
 from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1, XNestedSerializer3
 
 from services.models import Accounts
@@ -48,9 +49,10 @@ def XeroRefreshToken(refresh_token):
     print(json_response)
 
     new_refresh_token = json_response['refresh_token']
-    rt_file = open('refresh_token.txt', 'w')
-    rt_file.write(new_refresh_token)
-    rt_file.close()
+    cache.set('refresh_token',refresh_token,None)
+    #rt_file = open('refresh_token.txt', 'w')
+    #rt_file.write(new_refresh_token)
+    #rt_file.close()
 
     return [json_response['access_token'], json_response['refresh_token']]
 
