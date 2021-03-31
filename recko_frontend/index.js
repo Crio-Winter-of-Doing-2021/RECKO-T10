@@ -155,7 +155,7 @@ $(document).ready(function () {
           { data: "date"},
         ],
         columnDefs: [
-          { width: '100%', targets: 0 },
+          { width: '60%', targets: 0 },
           { width: '100%', targets: 2 },
           { width: '100%', targets: 3 },
           { width: '100%', targets: 4 }
@@ -225,6 +225,7 @@ $(document).ready(function () {
         
       });
 
+
      
     },
     error: function (response) {
@@ -245,13 +246,11 @@ $.fn.dataTable.ext.search.push(
     var max = $('#max').val();
     var createdAt = data[4] || 4; // Our date column in the table
 
-
-
-
-    if ((min == "" || max == "") ||(moment(createdAt).isSameOrAfter(min) && moment(createdAt).isSameOrBefore(max)))
+    if((min == "" || max == "") ||(moment(createdAt).isSameOrAfter(min) && moment(createdAt).isSameOrBefore(max)))
      {
-      return true;
-    }
+    return true;
+}
+
     return false;
   }
 );
@@ -263,6 +262,10 @@ $(document).ready(function () {
       var table = $('#transactionsTable').DataTable();
     table.draw();
   });
+
+ 
+ 
+
   document.getElementById("min").value="";
   document.getElementById("max").value="";
   
@@ -272,9 +275,51 @@ $(document).ready(function () {
 
 
 
+/* Custom filtering function which will search data in column four between two values */
+$.fn.dataTable.ext.search.push(
+	function( settings, data, dataIndex ) {
+		var min = parseFloat( $('#mina').val(), 10 );
+		var max = parseFloat( $('#maxa').val(), 10 );
+		var amt = parseFloat( data[2] ) || 0; // use data for the age column
+
+		if ( ( isNaN( min ) && isNaN( max ) ) ||
+			 ( isNaN( min ) && amt <= max ) ||
+			 ( min <= amt   && isNaN( max ) ) ||
+			 ( min <= amt   && amt <= max ) )
+		{
+			return true;
+		}
+		return false;
+	}
+);
+
+//const log = document.getElementById('mina');
+
+document.addEventListener('keyup', redraw);
+
+
+function redraw(e){
+  var table = $('#transactionsTable').DataTable();
+      table.draw();
+
+}
+
+
+/*                  AMOUNT FILTERS AND CLEARING             */
+
+
+  function clearAmount(){
+    document.getElementById("mina").value="";
+    document.getElementById("maxa").value="";
+    var table = $('#transactionsTable').DataTable();
+    table.draw();
+  }
 
 
   function clearDates(){
-    document.getElementById("min").reset();
+    document.getElementById("min").value="";
     document.getElementById("max").value="";
+    var table = $('#transactionsTable').DataTable();
+    table.draw();
   }
+

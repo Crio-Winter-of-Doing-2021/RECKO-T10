@@ -92,6 +92,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 
 
+
+<!---AMOUNT FILTERING PLUGIN --->
+
+<!--script src="https://cdn.datatables.net/plug-ins/1.10.24/filtering/row-based/range_numbers.js"></script-->
+
+
+
 <script src="index.js"></script>
 
 </head>
@@ -184,25 +191,44 @@
       </div>
     
       <!-- Table Data Column -->
-      <div>
+      <div style="align-items: center;text-align: center;">
 
-     
+        <!--table>
+          <tbody><tr>
+              <td>Minimum age:</td>
+              <td><input type="text" id="mina" name="mina"></td>
+          </tr>
+          <tr>
+              <td>Maximum age:</td>
+              <td><input type="text" id="maxa" name="maxa"></td>
+          </tr>
+      </tbody></table-->
 
         <h1  style="font-weight: bolder;color:rgb(15, 9, 1);text-align: center;margin-top: 20px;">Transaction Dashboard</h1>
 
-      <input type="text" id="datepicker">
+     
         <!-- Transactions -->
         <div id="filterDate">
         <h3>Filter by date range</h3><br/>
-        <div class="input-group input-daterange col-md-6" style="align-items: center;text-align: center;">
+        <div class="input-group input-daterange col-md-8" style="align-items: center;text-align: center;">
           From &nbsp;
           <input type="date" class="form-control date-range-filter" placeholder="Start Date" data-date-format="mm-dd-yyyy" id="min" />
           &nbsp;&nbsp;<span class="input-group-addon">to</span>&nbsp;&nbsp;
           <input type="date" class="form-control date-range-filter" placeholder="End Date" data-date-format="mm-dd-yyyy" id="max"/>
-          <button class="btn btn-outline-info" onlclick="clearDates()" id="reset-date">Clear</button>
- 
+          <button class="btn btn-outline-info" onclick="clearDates()" id="reset-date" type="button">Clear</button>
         </div>
     </div>
+    <br/><br/><br/>
+    <div id="filterAMount">
+      <h3>Filter by amount range</h3><br/>
+      <div class="input-group col-md-8" style="align-items: center;text-align: center;">
+        From &nbsp;
+        <input type="text" class="amt-range-filter" placeholder="Starting Amount"  id="mina" />
+        &nbsp;&nbsp;<span class="input-group-addon">to</span>&nbsp;&nbsp;
+        <input type="text" class="amt-range-filter" placeholder="Ending Amount"id="maxa"/>&nbsp;&nbsp;
+        <button class="btn btn-outline-info" onclick="clearAmount();" id="reset-date" type="button">Clear</button>
+      </div>
+  </div>
       <br/> <br/> <br/> <br/>
 
   </div>
@@ -237,10 +263,7 @@
 
           
         </table>
-        
-      
-      
-      
+
       
     </div>
 
