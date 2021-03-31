@@ -96,32 +96,41 @@ def xero_callback(request):
 
     refresh_token = json_response['refresh_token']
 
-    #rt_file = open('refresh_token.txt', 'w')
-    #rt_file.write(refresh_token)
-    #rt_file.close()
-    cache.set('refresh_token',refresh_token,None)
+    rt_file = open('refresh_token.txt', 'w')
+    rt_file.write(refresh_token)
+    rt_file.close()
+    if cache.has_key('refresh_token'):
+       cache.delete('refresh_token')
+    cache.set('refresh_token',refresh_token)
 
     access_token = json_response['access_token']
     print(refresh_token)
 
-    #rt_file = open('access_token.txt', 'w')
-    #rt_file.write(access_token)
-    #rt_file.close()
-    cache.set('access_token',access_token,None)
+    rt_file = open('access_token.txt', 'w')
+    rt_file.write(access_token)
+    rt_file.close()
+    cache.set('access_token',access_token)
     return HttpResponse("Xero Authentication Done!!! Close this page and login again!")
 
 
 def fetchXeroData(request):
-    old_refresh_token = cache.get('refresh_token')#open('refresh_token.txt', 'r').read()
+    old_refresh_token =cache.get('refresh_token') #open('refresh_token.txt', 'r').read() 
+
+
+    print(old_refresh_token)
     new_tokens = XeroRefreshToken(old_refresh_token)
     xero_tenant_id = XeroTenants(new_tokens[0])
 
     # use for loop and record offset number,increment offset number by 100
     offset = 0
     journalsFetched = 0
-    while True:
+    while True: 
         response = constructXeroUrl(new_tokens[0], xero_tenant_id, offset)
         r = response.json()
+
+        if response.status_code==429 or response.status_code==408:
+            time.sleep(response.headers['Retry-After'])
+            continue
 
         if len(r['Journals']) == 0:
             break
@@ -130,7 +139,7 @@ def fetchXeroData(request):
 
         serializer = XeroSerializer(data=r)
         if serializer.is_valid():
-            print(serializer.data)
+            #print(serializer.data)
             xeroDataEntry(r)
         else:
             print("ERROR")

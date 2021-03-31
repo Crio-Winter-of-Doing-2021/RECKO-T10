@@ -95,9 +95,9 @@ var auth_token;
                 console.log(responseData);
                 //set name ,adminPrivilege  in windows.sessionStorage()
                 auth_token = responseData["auth_token"];
-                localStorage.setItem('auth',auth_token);
-               localStorage.setItem('name',responseData['name']);
-               localStorage.setItem('adminPrivilege',responseData['adminPrivilege']);
+                sessionStorage.setItem('auth',auth_token);
+                sessionStorage.setItem('name',responseData['name']);
+                sessionStorage.setItem('adminPrivilege',responseData['adminPrivilege']);
                window.location.href="index.html";
             }
           });

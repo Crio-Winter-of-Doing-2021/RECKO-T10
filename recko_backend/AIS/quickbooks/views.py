@@ -126,7 +126,7 @@ def fetchQboData(request):
             print(serializer.errors)
         
         startposition=startposition+maxresults
-        msg="Number of Journals Fetched:{0}\n.You can close this window now and login again!!".format(journalsFetched)
+        msg="You can close this window now and login again!!"
     return HttpResponse(msg)
 
 

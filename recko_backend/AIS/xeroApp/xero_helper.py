@@ -46,13 +46,13 @@ def XeroRefreshToken(refresh_token):
                                  'refresh_token': refresh_token
                              })
     json_response = response.json()
-    print(json_response)
+    #print(json_response)
 
     new_refresh_token = json_response['refresh_token']
     cache.set('refresh_token',refresh_token,None)
-    #rt_file = open('refresh_token.txt', 'w')
-    #rt_file.write(new_refresh_token)
-    #rt_file.close()
+    rt_file = open('refresh_token.txt', 'w')
+    rt_file.write(new_refresh_token)
+    rt_file.close()
 
     return [json_response['access_token'], json_response['refresh_token']]
 

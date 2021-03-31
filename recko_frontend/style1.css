@@ -108,6 +108,30 @@ span.num {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+@media only screen and (max-width: 480px) {
+  .header-icon i {
+      padding: 10px 4px;
+  }
+  .l-side-box {
+      display: none;
+  }
+  .main-box {
+      /* margin: 50px 0 150px 0; */
+      margin: 30px 0 150px 0;
+  }
+  .shdl-table-box {
+
+      overflow-x: auto;
+  }
+
+  body {
+      font-family: 'Lato', sans-serif;
+  }
+
+  .login-img1{
+      margin-left: 0px;
+  }
+}
 
 
 /* CHARTS */
