@@ -276,7 +276,7 @@ $(document).ready(function () {
 
       // Update footer
       $( api.column( 2 ).footer() ).html(
-          '$'+pageTotal +' ( $'+ cr +' Cr)'+' ( $'+ dr +' Dr)'
+          '$'+pageTotal.toFixed(2) +' ( $'+ cr.toFixed(2) +' Cr)'+' ( $'+ dr.toFixed(2) +' Dr)'
       );
   }
          
