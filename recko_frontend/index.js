@@ -163,18 +163,6 @@ $(document).ready(function () {
       dom: "<Bfrl<t>ip>",
       buttons: [
          'copy','pdf','excel','csv','print'
-        /*$.extend(true, {}, buttonCommon, {
-          extend: "copyHtml5",
-        }),
-        $.extend(true, {}, buttonCommon, {
-          extend: "excelHtml5",
-        }),
-        $.extend(true, {}, buttonCommon, {
-          extend: "pdfHtml5",
-        }),
-        $.extend(true, {}, buttonCommon, {
-          extend: "csvHtml5",
-        }),*/
       ],
        initComplete: function () {
         var count = 0;
@@ -222,10 +210,78 @@ $(document).ready(function () {
           $('.select2').val(null).trigger('change');
         } );
     },
-        
+    
+    
+    footerCallback: function ( row, data, start, end, display ) {
+      var api = this.api(), data;
+
+      // Remove the formatting to get integer data for summation
+      var intVal = function ( i ) {
+          return typeof i === 'string' ?
+              i.replace(/[\$,]/g, '')*1 :
+              typeof i === 'number' ?
+                  i : 0;
+      };
+
+      // Total over all pages
+      var total = api
+          .cells( function ( index, data, node ) {
+              return api.row( index ).data().accountType === 'Credit' ?
+                  true : false;
+          }, 0 )
+          .data(2,{filter:'applied'})
+          .reduce( function (a, b) {
+              return parseFloat(a) + parseFloat(b);
+          }, 0 );
+
+
+          var dtotal = api
+          .cells( function ( index, data, node ) {
+              return api.row( index ).data().accountType === 'Debit' ?
+                  true : false;
+          }, 2,{filter:'applied'} )
+          .data(2,{filter:'applied'})
+          .reduce( function (a, b) {
+              return parseFloat(a) + parseFloat(b);
+          }, 0 );
+
+
+          var cr = 0;
+          var dr = 0;
+
+          var data1=data;
+      var data2 =api.rows( { search:'applied' } ).data().each(function(value, index) {
+        //console.log(value, index);
+        if(value['accountType']==='Credit'){
+          cr+=parseFloat(value['amount']);
+        }else{
+          dr+=parseFloat(value['amount']);
+        }
+    });
+    //console.log(dr);
+       //console.log(cr);
+      
+
+
+
+      // Total over this page
+      var pageTotal = api
+          .column( 2,{filter:'applied'} )
+          .data()
+          .reduce( function (a, b) {
+           
+              return parseFloat(a) + parseFloat(b);
+          }, 0 );
+
+
+      // Update footer
+      $( api.column( 2 ).footer() ).html(
+          '$'+pageTotal +' ( $'+ cr +' Cr)'+' ( $'+ dr +' Dr)'
+      );
+  }
+         
       });
-
-
+    
      
     },
     error: function (response) {
@@ -280,7 +336,7 @@ $.fn.dataTable.ext.search.push(
 	function( settings, data, dataIndex ) {
 		var min = parseFloat( $('#mina').val(), 10 );
 		var max = parseFloat( $('#maxa').val(), 10 );
-		var amt = parseFloat( data[2] ) || 0; // use data for the age column
+		var amt = parseFloat( data[2] ) || 0; // use data for the amt column
 
 		if ( ( isNaN( min ) && isNaN( max ) ) ||
 			 ( isNaN( min ) && amt <= max ) ||
