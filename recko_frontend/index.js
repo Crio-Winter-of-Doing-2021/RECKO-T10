@@ -88,6 +88,8 @@ function chartData(table) {
   });
 }    
 
+
+
 $(document).ready(function () {
   if (sessionStorage.getItem("adminPrivilege") == "true") {
     document.getElementById("admin").style.display = "block";
@@ -378,4 +380,5 @@ function redraw(e){
     var table = $('#transactionsTable').DataTable();
     table.draw();
   }
+
 
