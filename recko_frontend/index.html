@@ -105,7 +105,7 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(to top, #4fb0ff, #0f83a0)">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(to top, #4fb0ff, #42b7d4)">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -173,6 +173,8 @@
 
   <div class="container" style="text-align: center;">
    <div id="connectionStatus"></div>
+   <br/><br/>
+   <div id="chart"></div>
     
     <div class="row">
      
@@ -191,7 +193,7 @@
       </div>
     
       <!-- Table Data Column -->
-      <div style="align-items: center;text-align: center;">
+      <div style="align-items: center;text-align: center;margin-left:40px;" >
 
         <!--table>
           <tbody><tr>
@@ -205,13 +207,13 @@
       </tbody></table-->
 
         <h1  style="font-weight: bolder;color:rgb(15, 9, 1);text-align: center;margin-top: 20px;">Transaction Dashboard</h1>
-
+        <br/><br/>
      
         <!-- Transactions -->
-        <div id="filterDate">
-        <h3>Filter by date range</h3><br/>
-        <div class="input-group input-daterange col-md-8" style="align-items: center;text-align: center;">
-          From &nbsp;
+        <div id="filterDate" style="align-items: center;text-align: center;">
+        <p><h3>Filter by date range</h3></p><br/>
+        <div class="input-group input-daterange col-md-6" style="align-items: center;text-align: center;">
+          &nbsp;From &nbsp;
           <input type="date" class="form-control date-range-filter" placeholder="Start Date" data-date-format="mm-dd-yyyy" id="min" />
           &nbsp;&nbsp;<span class="input-group-addon">to</span>&nbsp;&nbsp;
           <input type="date" class="form-control date-range-filter" placeholder="End Date" data-date-format="mm-dd-yyyy" id="max"/>
@@ -219,13 +221,13 @@
         </div>
     </div>
     <br/><br/><br/>
-    <div id="filterAMount">
+    <div id="filterAMount" style="align-items: center;text-align: center;">
       <h3>Filter by amount range</h3><br/>
-      <div class="input-group col-md-8" style="align-items: center;text-align: center;">
-        From &nbsp;
+      <div class="input-group col-md-8 input-amt-range" style="align-items: center;text-align: center;">
+        &nbsp;From &nbsp;
         <input type="text" class="amt-range-filter" placeholder="Starting Amount"  id="mina" />
         &nbsp;&nbsp;<span class="input-group-addon">to</span>&nbsp;&nbsp;
-        <input type="text" class="amt-range-filter" placeholder="Ending Amount"id="maxa"/>&nbsp;&nbsp;
+        <input type="text" class="amt-range-filter" placeholder="Ending Amount"id="maxa"/>&nbsp;
         <button class="btn btn-outline-info" onclick="clearAmount();" id="reset-date" type="button">Clear</button>
       </div>
   </div>

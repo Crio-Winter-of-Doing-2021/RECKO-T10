@@ -1,4 +1,5 @@
 var offLine=false;
+
 window.addEventListener("online", connectionUpdate);
 window.addEventListener("offline", connectionUpdate);
 
@@ -22,71 +23,6 @@ function connectionUpdate(event) {
 }
 
 
-
-
-$(document).ready(function () {
-  // Create DataTable
-  var table = $("#filterDate");//.DataTable({});
-
-  // Create the chart with initial data
-  var container = $("<div/>").insertBefore(table);//table.table().container());
-
-  var chart = Highcharts.chart(container[0], {
-    chart: {
-      type: "bar",
-    },
-    title: {
-      text: "Amount on a particular date",
-    },
-    xaxis:{
-         title:'Date'
-    },
-    yaxis:{
-      title:'Amount'
-    },
-    series: [
-      {
-        data: [-1, 2, 4, -6, 0, 7,-3], //chartData(table),
-      },
-      {
-        data: [1, 2, 3, 4, 5, 6, 7],
-      },
-    ],
-  });
-
-
-
-
-
-  // On each draw, update the data in the chart
-  table.on("draw", function () {
-    chart.series[0].setData(chartData(table));
-  });
-});
-
-function chartData(table) {
-  var counts = {};
-
-  // Count the number of entries for each position
-  table
-    .column(2, { search: "applied" })
-    .data()
-    .each(function (val) {
-      if (counts[val]) {
-        counts[val] += 1;
-      } else {
-        counts[val] = 1;
-      }
-    });
-
-  // And map it to the format highcharts uses
-  return $.map(counts, function (val, key) {
-    return {
-      name: key,
-      y: val,
-    };
-  });
-}    
 
 
 
@@ -134,6 +70,12 @@ $(document).ready(function () {
       $("#transactionsTable").dataTable().fnDestroy();
       
 
+
+var netDebit=[];
+var netCredit=[];
+var dateList=[];
+
+     
       var buttonCommon = {
         exportOptions: {
           format: {
@@ -225,29 +167,6 @@ $(document).ready(function () {
                   i : 0;
       };
 
-      // Total over all pages
-      var total = api
-          .cells( function ( index, data, node ) {
-              return api.row( index ).data().accountType === 'Credit' ?
-                  true : false;
-          }, 0 )
-          .data(2,{filter:'applied'})
-          .reduce( function (a, b) {
-              return parseFloat(a) + parseFloat(b);
-          }, 0 );
-
-
-          var dtotal = api
-          .cells( function ( index, data, node ) {
-              return api.row( index ).data().accountType === 'Debit' ?
-                  true : false;
-          }, 2,{filter:'applied'} )
-          .data(2,{filter:'applied'})
-          .reduce( function (a, b) {
-              return parseFloat(a) + parseFloat(b);
-          }, 0 );
-
-
           var cr = 0;
           var dr = 0;
 
@@ -259,11 +178,10 @@ $(document).ready(function () {
         }else{
           dr+=parseFloat(value['amount']);
         }
-    });
-    //console.log(dr);
-       //console.log(cr);
-      
 
+       
+    });
+    //console.log(data2);
 
 
       // Total over this page
@@ -278,19 +196,101 @@ $(document).ready(function () {
 
       // Update footer
       $( api.column( 2 ).footer() ).html(
-          '$'+pageTotal.toFixed(2) +' ( $'+ cr.toFixed(2) +' Cr)'+' ( $'+ dr.toFixed(2) +' Dr)'
+          '$'+pageTotal.toFixed(2) +' ( $'+ cr.toFixed(2) +' Cr)'+' ( $'+ dr.toFixed(2) +' De)'
       );
+
+   
+      var dates=api.column( 4,{ search:'applied' } ).data().unique();
+      dates.sort();
+      netDebit=[];
+      netCredit=[];
+      dateList=[];
+       dateList=dates.toArray();
+      dateList.forEach(function(date) {
+  
+        var debit=0.0;var credit=0.0;
+        var g=data2.filter(function(l){
+
+          if(l['date'] === date){
+            if(l['accountType']==='Debit'){
+              debit+=parseFloat(l['amount']);
+            }else{
+              credit+=parseFloat(l['amount']);
+            }
+          }
+      });
+      netDebit.push(parseFloat(debit.toFixed(2)));
+      netCredit.push(parseFloat(credit.toFixed(2)));
+      
+      var s=date+" "+debit.toFixed(2)+" "+credit.toFixed(2);
+      //console.log(netCredit);
+     
+      
+    });
+    plotChart(netDebit,netCredit,dateList);
+   //console.log('\n');
+   
   }
          
       });
-    
      
+    
     },
     error: function (response) {
       alert(response["statusText"]);
     },
   });
 });
+
+$(document).ready(function(){
+
+});
+
+function plotChart(netDebit,netCredit,dateList){
+  var fdate=$("#filterDate");
+ console.log(netCredit.length);
+  console.log(netDebit.length);
+  console.log(dateList.length);
+    var container = $("<div/>").insertBefore(fdate);
+  Highcharts.chart('chart', {
+    title: {
+      text: 'Net debit/credit on a particular date'
+  },  
+      chart:{
+      type:'area'
+      },
+      xAxis: {
+          categories: dateList
+      },
+       yAxis: {
+         allowDecimals:true,
+      
+          title: {
+              text: 'Net Amount'
+          }
+      },
+      series:[{
+      name:'Debit',
+      data:netDebit,
+      color: '#32a850',
+      },
+      {
+        name:'Credit',
+        data:netCredit,
+        color: '#ba1e28',
+        }
+    ]
+  
+  });
+  }
+  
+  
+
+
+
+
+
+
 
 
 $('.input-daterange input').each(function() {
@@ -351,8 +351,6 @@ $.fn.dataTable.ext.search.push(
 	}
 );
 
-//const log = document.getElementById('mina');
-
 document.addEventListener('keyup', redraw);
 
 
@@ -380,5 +378,6 @@ function redraw(e){
     var table = $('#transactionsTable').DataTable();
     table.draw();
   }
+
 
 

@@ -71,15 +71,16 @@ def XeroTenants(access_token):
     return json_dict['tenantId']
 
 
-def constructXeroUrl(access_token, tid, offset):
+def constructXeroUrl(access_token, tid,offset):
     url = 'https://api.xero.com/api.xro/2.0/Journals?offset='+str(offset)
     response = requests.get(url,
                             headers={
                                 'Authorization': 'Bearer ' + access_token,
                                 'Xero-Tenant-Id': tid,
-                                'Retry-After': "36000",
+                                'Retry-After':"360000",
                                 'Accept': 'application/json'
                             })
+    print(response)
     return response
 
 

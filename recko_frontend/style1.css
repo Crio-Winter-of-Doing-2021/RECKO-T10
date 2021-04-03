@@ -108,7 +108,13 @@ span.num {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 600px) {
+  .input-daterange{
+    margin-left:230px;
+  }
+  .input-amt-range{
+    margin-left:230px;
+  }
   .header-icon i {
       padding: 10px 4px;
   }

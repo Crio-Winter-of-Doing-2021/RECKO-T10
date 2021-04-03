@@ -120,13 +120,16 @@ def fetchXeroData(request):
     print(old_refresh_token)
     new_tokens = XeroRefreshToken(old_refresh_token)
     xero_tenant_id = XeroTenants(new_tokens[0])
+   
 
+    
     # use for loop and record offset number,increment offset number by 100
     offset = 0
     journalsFetched = 0
     while True: 
         response = constructXeroUrl(new_tokens[0], xero_tenant_id, offset)
         r = response.json()
+        print(r)
 
         if response.status_code==429 or response.status_code==408:
             time.sleep(response.headers['Retry-After'])
@@ -146,6 +149,7 @@ def fetchXeroData(request):
         offset += 100
     msg="You can close this window now and login again!!"
     return HttpResponse(msg)
+    
 
 
 
