@@ -46,7 +46,7 @@ def XeroRefreshToken(refresh_token):
                                  'refresh_token': refresh_token
                              })
     json_response = response.json()
-    #print(json_response)
+    print(json_response)
 
     new_refresh_token = json_response['refresh_token']
     cache.set('refresh_token',refresh_token,None)
