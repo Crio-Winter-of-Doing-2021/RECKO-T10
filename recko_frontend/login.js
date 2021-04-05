@@ -83,12 +83,12 @@ var auth_token;
             if (!response.ok) {
               alert(response.statusText);
               document.getElementById("failure").innerHTML=response.statusText;
-              return {};
+              return null;
             }
             return response.json();
           })
           .then(function (responseData) {
-            if (responseData.length == 0) {
+            if (responseData == null) {
               console.log("Bad response from server.");
               document.getElementById("failure").innerHTML="Try logging in again later!";
             } else {
