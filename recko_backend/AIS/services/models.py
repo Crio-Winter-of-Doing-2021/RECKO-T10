@@ -13,5 +13,5 @@ class Accounts(models.Model):
     providerName=models.CharField(max_length=20)
     
     def __str__(self):
-        return "{}-{}-{}-{}".format(self.id,self.accountName,self.accountType,self.amount)
+        return "{}-{}-{}-{}-{}-{}".format(self.id,self.accountId,self.accountName,self.accountType,self.amount,self.date)
 

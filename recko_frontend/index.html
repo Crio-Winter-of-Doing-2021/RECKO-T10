@@ -174,6 +174,14 @@
   <div class="container" style="text-align: center;">
    <div id="connectionStatus"></div>
    <br/><br/>
+   <div>&nbsp;
+   <button type="button" class="btn btn-warning" onclick="paginated()" style="float:right;margin-left:4px;">Server Side Processing</button>&nbsp;
+   <button type="button" class="btn btn-info" onclick="window.location.reload()" style="float:right;">Client Side Processing</button>
+  </div>
+   <h1  style="font-weight: bolder;color:rgb(15, 9, 1);text-align: center;margin-top: 20px;">Transaction Dashboard
+  
+  </h1>
+   
    <div id="chart"></div>
     
     <div class="row">
@@ -194,20 +202,12 @@
     
       <!-- Table Data Column -->
       <div style="align-items: center;text-align: center;margin-left:40px;" >
+       
+        <!--br/> <br/> 
+        <button type="button" class="btn btn-warning" onclick="paginated()">Server Side Processing</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-info" onclick="window.location.reload()">Client Side Processing</button>
+        <br/> <br/--> 
 
-        <!--table>
-          <tbody><tr>
-              <td>Minimum age:</td>
-              <td><input type="text" id="mina" name="mina"></td>
-          </tr>
-          <tr>
-              <td>Maximum age:</td>
-              <td><input type="text" id="maxa" name="maxa"></td>
-          </tr>
-      </tbody></table-->
-
-        <h1  style="font-weight: bolder;color:rgb(15, 9, 1);text-align: center;margin-top: 20px;">Transaction Dashboard</h1>
-        <br/><br/>
      
         <!-- Transactions -->
         <div id="filterDate" style="align-items: center;text-align: center;">
@@ -222,19 +222,21 @@
     </div>
     <br/><br/><br/>
     <div id="filterAMount" style="align-items: center;text-align: center;">
-      <h3>Filter by amount range</h3><br/>
-      <div class="input-group col-md-8 input-amt-range" style="align-items: center;text-align: center;">
+      <p><h3>Filter by amount range</h3></p><br/>
+      <div class="input-group col-md-6 input-amt-range" style="align-items: center;text-align: center;">
         &nbsp;From &nbsp;
         <input type="text" class="amt-range-filter" placeholder="Starting Amount"  id="mina" />
         &nbsp;&nbsp;<span class="input-group-addon">to</span>&nbsp;&nbsp;
         <input type="text" class="amt-range-filter" placeholder="Ending Amount"id="maxa"/>&nbsp;
         <button class="btn btn-outline-info" onclick="clearAmount();" id="reset-date" type="button">Clear</button>
       </div>
+      <br/> <br/> 
   </div>
-      <br/> <br/> <br/> <br/>
-
+     
   </div>
 
+
+  
 
         <table id="transactionsTable" class="display nowrap" style="width:100%;">
             <colgroup>

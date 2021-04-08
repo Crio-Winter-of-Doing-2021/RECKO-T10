@@ -9,7 +9,7 @@ from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
-from .serializers import EmptySerializer,DataSerializer, XeroSerializer, XNestedSerializer1, QuickBooksSerializer,QuickBooksSerializer1, XNestedSerializer3,QNestedSerializer1,QNestedSerializer2,QNestedSerializer3,QNestedSerializer4
+from .serializers import EmptySerializer, DataSerializer, XeroSerializer, XNestedSerializer1, QuickBooksSerializer, QuickBooksSerializer1, XNestedSerializer3, QNestedSerializer1, QNestedSerializer2, QNestedSerializer3, QNestedSerializer4
 
 from django.core.cache import cache
 from django.shortcuts import render, redirect
@@ -29,29 +29,34 @@ import base64
 import schedule
 import time
 
-from .quickbooks_helper import constructUrl,quickbooksDataEntry
-from .xero_helper import constructXeroUrl, XeroRefreshToken, XeroTenants,xeroDataEntry
+from .quickbooks_helper import constructUrl, quickbooksDataEntry
+from .xero_helper import constructXeroUrl, XeroRefreshToken, XeroTenants, xeroDataEntry
 
 from .models import Accounts
 
 
-
 # Create your views here.
-from django.contrib.auth import get_user_model,logout
+from django.contrib.auth import get_user_model, logout
 from django.core.exceptions import ImproperlyConfigured
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
-from rest_framework.permissions import AllowAny,IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
 from . import serializers
-from users.utils import get_and_authenticate_user,create_user_account
+from users.utils import get_and_authenticate_user, create_user_account
 from users.models import CustomUser
 from datetime import date
 
 
-User = get_user_model()
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from functools import reduce
+from django.db.models import Q
+from django.http import JsonResponse
+from django.core import serializers
+from operator import and_
 
+User = get_user_model()
 
 
 class TransactionViewSet(viewsets.GenericViewSet):
@@ -61,14 +66,15 @@ class TransactionViewSet(viewsets.GenericViewSet):
     serializer_class = EmptySerializer
     serializer_classes = {
         'transactions': EmptySerializer,
+        'transactionsPaginated': EmptySerializer,
         'filterByDate': EmptySerializer,
         'filterByType': EmptySerializer,
         'filterByAccName': EmptySerializer,
-        'xeroAccounts':EmptySerializer,
-        'xeroUsers':EmptySerializer
+        'xeroAccounts': EmptySerializer,
+        'xeroUsers': EmptySerializer
     }
 
-    queryset=''
+    queryset = ''
 
     @action(methods=['GET'], detail=False, permission_classes=[
         IsAuthenticated,
@@ -77,67 +83,132 @@ class TransactionViewSet(viewsets.GenericViewSet):
         #returns data from our database
         queryset=Accounts.objects.values('accountId','accountName','amount','date','accountType','providerName')
         serializer=DataSerializer(queryset,many=True)
-        return Response(serializer.data,status=status.HTTP_200_OK)
+        return Response(serializer.data,status.HTTP_200_OK)
+
+
+
+
+    @action(methods=['GET'], detail=False, permission_classes=[
+        IsAuthenticated,
+    ])
+    def transactionsPaginated(self, request):
+        fields=['accountId','accountName','amount','accountType','date']
+        dt = (request.GET)
+        draw = int(dt.get('draw'))
+        start = int(dt.get('start'))
+        length = int(dt.get('length'))
+        search = dt.get('search[value]')
+        colOrder=int(dt.get('order[0][column]'))
+        field='accountId'
+        if colOrder >=0:
+            if dt.get('order[0][dir]') == 'asc':
+                field=fields[colOrder]
+            else:
+                field="-"+fields[colOrder]
+
+        print(field)
+        records_total = Accounts.objects.all().exclude(Q(accountId=None) | Q(
+            accountName=None) | Q(amount=None) | Q(accountType=None) | Q(date=None)).count()
+        records_filtered = records_total
+        accounts = Accounts.objects.all().order_by(field)
+        if search:
+            accounts = Accounts.objects.filter(
+                    Q(accountId__icontains=search) |
+                    Q(accountName__icontains=search) |
+                    Q(amount__icontains=search) |
+                    Q(accountType__icontains=search) |
+                    Q(date__icontains=search)
+                ).order_by(field)
+            records_total = accounts.count()
+            records_filtered = records_total
+
+            # Atur paginator
+        paginator = Paginator(accounts, length)
+        pg=start / length + 1
+
+        try:
+            object_list = paginator.page(pg).object_list
+        except PageNotAnInteger:
+            object_list = paginator.page(1).object_list
+        except EmptyPage:
+            object_list = paginator.page(paginator.num_pages).object_list
 
         
+
+        data = [
+            {
+                'accountId': inv.accountId,
+                'accountName': inv.accountName,
+                'amount': inv.amount,
+                'accountType': inv.accountType,
+                'date': inv.date,
+            } for inv in object_list
+        ]
+
+        print(records_filtered," ",records_total," ",len(data))
+
+        return Response(data={
+            'draw': draw,
+            'recordsTotal': records_total,
+            'recordsFiltered': records_filtered,
+            'data': data,
+        }, status=status.HTTP_200_OK)
+
+
 
     @action(methods=['POST'], detail=False, permission_classes=[
         IsAuthenticated,
     ])
     def filterByDate(self, request):
-        
-        startDate=request.data['startDate']
-        endDate=request.data['endDate']
+
+        startDate = request.data['startDate']
+        endDate = request.data['endDate']
         if startDate > endDate:
-            return Response({"message":"Start date cannot be before end date"},status.HTTP_400_BAD_REQUEST)
-        
-        if endDate is None or len(endDate) ==0:
-            endDate=datetime.now()
+            return Response({"message": "Start date cannot be before end date"}, status.HTTP_400_BAD_REQUEST)
 
-        if startDate is None or len(endDate) ==0:
-            return Response({"message":"Please specify a start date"},status.HTTP_400_BAD_REQUEST)
+        if endDate is None or len(endDate) == 0:
+            endDate = datetime.now()
 
-        queryset=Accounts.objects.filter(date__range=[startDate,endDate])
-        serializer=DataSerializer(queryset,many=True)
-        
-        if len(serializer.data)==0:
-            return Response({"message":"No transaction records found"},status=status.HTTP_404_NOT_FOUND)
-        return Response(serializer.data,status.HTTP_200_OK)
-        
+        if startDate is None or len(endDate) == 0:
+            return Response({"message": "Please specify a start date"}, status.HTTP_400_BAD_REQUEST)
+
+        queryset = Accounts.objects.filter(date__range=[startDate, endDate])
+        serializer = DataSerializer(queryset, many=True)
+
+        if len(serializer.data) == 0:
+            return Response({"message": "No transaction records found"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(serializer.data, status.HTTP_200_OK)
 
     @action(methods=['POST'], detail=False, permission_classes=[
         AllowAny,
     ])
     def filterByType(self, request):
-        
-        accType=request.data['type']
-        
 
-        if accType is None or len(accType) ==0:
-            return Response({"message":"Invalid transaction type"},status.HTTP_400_BAD_REQUEST)
+        accType = request.data['type']
 
-        queryset=Accounts.objects.filter(accountType=accType)
-        serializer=DataSerializer(queryset,many=True)
-        
-        return Response(serializer.data,status.HTTP_200_OK)
-        
+        if accType is None or len(accType) == 0:
+            return Response({"message": "Invalid transaction type"}, status.HTTP_400_BAD_REQUEST)
+
+        queryset = Accounts.objects.filter(accountType=accType)
+        serializer = DataSerializer(queryset, many=True)
+
+        return Response(serializer.data, status.HTTP_200_OK)
 
     @action(methods=['POST'], detail=False, permission_classes=[
         AllowAny,
     ])
     def filterByAccName(self, request):
-        accname=request.data['accountName']
+        accname = request.data['accountName']
 
         if accname is None or len(accname) == 0:
-            return Response({"message":"Account Name cannot be blank"},status.HTTP_400_BAD_REQUEST)
+            return Response({"message": "Account Name cannot be blank"}, status.HTTP_400_BAD_REQUEST)
 
-        queryset=Accounts.objects.filter(accountName=accname)
-        serializer=DataSerializer(queryset,many=True)
-        
-        if len(serializer.data)==0:
-            return Response({"message":"No matching account name found"},status=status.HTTP_404_NOT_FOUND)
-        return Response(serializer.data,status.HTTP_200_OK)
-        
+        queryset = Accounts.objects.filter(accountName=accname)
+        serializer = DataSerializer(queryset, many=True)
+
+        if len(serializer.data) == 0:
+            return Response({"message": "No matching account name found"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(serializer.data, status.HTTP_200_OK)
 
     def get_serializer_class(self):
         if not isinstance(self.serializer_classes, dict):
