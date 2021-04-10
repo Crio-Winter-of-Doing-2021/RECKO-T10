@@ -56,6 +56,10 @@ from django.http import JsonResponse
 from django.core import serializers
 from operator import and_
 
+
+from .queryGen import queryset_generator
+
+
 User = get_user_model()
 
 
@@ -66,6 +70,7 @@ class TransactionViewSet(viewsets.GenericViewSet):
     serializer_class = EmptySerializer
     serializer_classes = {
         'transactions': EmptySerializer,
+        'getTotalRecs':EmptySerializer,
         'transactionsPaginated': EmptySerializer,
         'filterByDate': EmptySerializer,
         'filterByType': EmptySerializer,
@@ -76,14 +81,42 @@ class TransactionViewSet(viewsets.GenericViewSet):
 
     queryset = ''
 
-    @action(methods=['GET'], detail=False, permission_classes=[
+    @action(methods=['GET','POST'], detail=False, permission_classes=[
         IsAuthenticated,
     ])
     def transactions(self, request):
         #returns data from our database
-        queryset=Accounts.objects.values('accountId','accountName','amount','date','accountType','providerName')
+        accName=request.data['accName']
+        openAmt=request.data['stAmt']
+        closeAmt=request.data['endAmt']
+        stDate=request.data['stDate']
+        endDate=request.data['endDate']
+        de=request.data['de']
+        cr=request.data['cr']
+
+        queryset=queryset_generator(accName,openAmt,closeAmt,stDate,endDate,de,cr)
         serializer=DataSerializer(queryset,many=True)
         return Response(serializer.data,status.HTTP_200_OK)
+
+
+    @action(methods=['GET'], detail=False, permission_classes=[
+        IsAuthenticated,
+    ])
+    def getTotalRecs(self, request):
+        #returns data from our database
+        num=Accounts.objects.all().count()
+        print(num)
+        num1=Accounts.objects.count()
+        print(num1)
+        sets=1
+        total=num1
+        num2=num1
+        if num1%100==num1:
+            sets=1
+        else:
+            cnt=divmod(num1, 100)           
+            sets=cnt[0] if cnt[1]==0 else cnt[0]+1
+        return Response(data={"sets":sets,"totalRecords":total,"lastSet":cnt[1]},status=status.HTTP_200_OK)
 
 
 
@@ -92,6 +125,7 @@ class TransactionViewSet(viewsets.GenericViewSet):
         IsAuthenticated,
     ])
     def transactionsPaginated(self, request):
+        print(request.data)
         fields=['accountId','accountName','amount','accountType','date']
         dt = (request.GET)
         draw = int(dt.get('draw'))
@@ -122,7 +156,7 @@ class TransactionViewSet(viewsets.GenericViewSet):
             records_total = accounts.count()
             records_filtered = records_total
 
-            # Atur paginator
+           
         paginator = Paginator(accounts, length)
         pg=start / length + 1
 
@@ -156,6 +190,10 @@ class TransactionViewSet(viewsets.GenericViewSet):
 
 
 
+
+
+
+############################# ADDITIONAL APIs FOR FUTURE INTEGRATION PURPOSES #########################################
     @action(methods=['POST'], detail=False, permission_classes=[
         IsAuthenticated,
     ])

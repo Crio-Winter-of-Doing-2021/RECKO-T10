@@ -1,5 +1,5 @@
 from django.db import models
-
+from fuzzycount import FuzzyCountManager
 
 
 
@@ -11,6 +11,8 @@ class Accounts(models.Model):
     date=models.DateField()
     accountType=models.CharField(max_length=6)
     providerName=models.CharField(max_length=20)
+
+    objects = FuzzyCountManager()
     
     def __str__(self):
         return "{}-{}-{}-{}-{}-{}".format(self.id,self.accountId,self.accountName,self.accountType,self.amount,self.date)
