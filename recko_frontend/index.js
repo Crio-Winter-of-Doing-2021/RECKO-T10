@@ -1,3 +1,5 @@
+/*           CHECKS INTERNET CONNECTION           */
+
 var offLine=false;
 
 window.addEventListener("online", connectionUpdate);
@@ -22,15 +24,76 @@ function connectionUpdate(event) {
   }
 }
 
+/*  ##############################################################################################      */
+
+function loop(data,str){
+  var i;
+  var c=1;
+  for (i = 1; i <= data['sets']; i++) { 
+    if(i==1){
+          $(str).append(
+                `<option value="100">Latest 100</option>`
+          );
+
+      }else if(i==data['sets']){
+        $(str).append(
+          `<option value="${c} - ${c+data['lastSet']-1}" id="last">${c} - ${c+data['lastSet']-1}</option>`
+    );
+      }else{
+        $(str).append(
+          `<option value="${c} - ${c+99}">${c} - ${c+99}</option>`
+        );
+
+      }
+      c+=100;
+  }
+}
+
+$(document).on('change', 'select', function() {
+  console.log($(this).val()); // the selected options’s value
+
+  // if you want to do stuff based on the OPTION element:
+  var opt = $(this).find('option:selected')[0];
+  // use switch or if/else etc.
+});
+
+function totalRec(){
+  var token = "Token ";
+  var token1 = sessionStorage.getItem("auth");
+  var authorization = token.concat(token1);
+  if (sessionStorage.getItem("auth") === null) {
+    window.location.href = "login.html";
+  }
+  $.ajax({
+    type: "GET",
+    url: "http://127.0.0.1:8000/getTotalRecs/",
+    headers: { Authorization: authorization },
+    success: function (data) {
+       console.log(data);
+      loop(data,'#records');
+    },
+    error: function (response) {
+      alert(response["statusText"]);
+    },
+  });
+
+
+
+}
 
 
 
 
-$(document).ready(function () {
+
+window.onload = function(){
   if (sessionStorage.getItem("adminPrivilege") == "true") {
     document.getElementById("admin").style.display = "block";
   }
-});
+  //$('#myModal').modal('show');
+  totalRec();
+  load();
+}
+
 
 function logout() {
   $.ajax({
@@ -49,7 +112,9 @@ function logout() {
 }
 
 
-$(document).ready(function () {
+/*                   CLIENT SIDE DATA FETCH AND PAGINATED DISPLAY                      */
+
+function load (a,b,c,d,e,f,g) {
   var token = "Token ";
   var token1 = sessionStorage.getItem("auth");
   var authorization = token.concat(token1);
@@ -58,13 +123,32 @@ $(document).ready(function () {
   }
 
 
-
-
-  
+  var body={
+    "accName":a,
+    "stDate":b,
+    "endDate":c,
+    "stAmt":d,
+    "endAmt":e,
+    "de":f,
+    "cr":g,
+  };
+  if(typeof(a)=="undefined"){
+    body={
+      "accName":'',
+      "stDate":'',
+      "endDate":'',
+      "stAmt":'',
+      "endAmt":'',
+      "de":'',
+      "cr":'',
+    };
+  }
+  console.log(body);
   $.ajax({
-    type: "GET",
+    type: "POST",
     url: "http://127.0.0.1:8000/transactions/",
     headers: { Authorization: authorization },
+    data:body,
     success: function (data) {
       $("#transactionsTable").dataTable().fnDestroy();
       
@@ -239,14 +323,14 @@ var dateList=[];
       alert(response["statusText"]);
     },
   });
-});
+}
+
+/*  ###########################################################################     */
 
 
+/*                     SERVER SIDE PAGINATED FETCH                  */
 
-
-
-
-function paginated(){
+function paginated(a,b,c,d,e,f,g){
 
   var token = "Token ";
   var token1 = sessionStorage.getItem("auth");
@@ -254,6 +338,36 @@ function paginated(){
   if (sessionStorage.getItem("auth") === null) {
     window.location.href = "login.html";
   }
+
+
+  var body={
+    "accName":a,
+    "stDate":b,
+    "endDate":c,
+    "stAmt":d,
+    "endAmt":e,
+    "de":f,
+    "cr":g,
+  };
+  if(typeof(a)=="undefined"){
+    body={
+      "accName":'',
+      "stDate":'',
+      "endDate":'',
+      "stAmt":'',
+      "endAmt":'',
+      "de":'',
+      "cr":'',
+    };
+  }
+  
+
+
+  document.getElementById("card1").style.display = "none";
+  document.getElementById("card2").style.display = "none";
+  document.getElementById("client").style.display = "none";
+  document.getElementById("server").style.display = "block";
+
 
   var netDebit=[];
   var netCredit=[];
@@ -293,7 +407,7 @@ function paginated(){
             type: "GET",
             url: 'http://127.0.0.1:8000/transactionsPaginated/',
             headers: { Authorization: authorization },
-            
+            body:body
         },
           columns: [
             { data: "accountId"},
@@ -449,13 +563,13 @@ function paginated(){
 }
 
 
+/*########################################################################################*/
 
+/*         GRAPH /CHART GENERATION FUNCTION              */
 
 function plotChart(netDebit,netCredit,dateList){
   var fdate=$("#filterDate");
- //console.log(netCredit.length);
-  //console.log(netDebit.length);
-  //console.log(dateList.length);
+ 
     var container = $("<div/>").insertBefore(fdate);
   Highcharts.chart('chart', {
     title: {
@@ -490,13 +604,9 @@ function plotChart(netDebit,netCredit,dateList){
   }
   
   
+/* #########################################################################*/
 
-
-
-
-
-
-
+/*                     AMOUNT AND DATE RANGE FILTERS              */
 
 $('.input-daterange input').each(function() {
   $(this).datepicker('clearDates');
@@ -564,9 +674,9 @@ function redraw(e){
       table.draw();
 
 }
+/* #######################################################################################    */
 
-
-/*                  AMOUNT FILTERS AND CLEARING             */
+/*                  AMOUNT AND DATE FILTERS CLEARING             */
 
 
   function clearAmount(){
@@ -586,3 +696,36 @@ function redraw(e){
 
 
 
+/*  ################################################################################   */
+
+/*      PROCESS MODAL INPUTS ON FORM SUBMIT AND SEND TO load() OR paginated FUNCTION  */
+
+
+$(document).ready(function() { 
+$( "#filterData" ).submit(function( event ) {
+ 
+ event.preventDefault();
+ 
+  var open=document.getElementById("stAmt").value;
+  var close=document.getElementById("endAmt").value;
+  var stD=$("input[name=stDate]").val();
+  var endD=$("input[name=endDate]").val();
+  var accName=document.getElementById("accName").value;
+  var de=document.getElementById('ide').checked?"Debit":'';
+  var cr=document.getElementById('icr').checked?"Credit":'';
+  var t=open+" "+close+" "+stD+" "+endD+" "+accName+" "+de+" "+cr;
+  console.log(de);
+  console.log(cr);
+  console.log(t);
+  load(accName,stD,endD,open,close,de,cr);
+
+});
+
+});
+
+
+
+function clearForm(){
+  document.getElementById('filterData').reset();
+  load();
+}

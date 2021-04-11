@@ -102,19 +102,29 @@ span.num {
   right: 2px;
 }
 
-
-
-@media screen and (max-height: 450px) {
+div.ex3 {
+  float: right;
+  
+  
+}
+#rec{
+  float: right;
+  margin-right: 2px;
+}
+@media screen and (max-width: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+  body{
+    align-items: center;
+  }
 }
 @media only screen and (min-width: 600px) {
-  .input-daterange{
+  /*.input-daterange{
     margin-left:230px;
   }
   .input-amt-range{
     margin-left:230px;
-  }
+  }*/
   .header-icon i {
       padding: 10px 4px;
   }
@@ -140,4 +150,4 @@ span.num {
 }
 
 
-/* CHARTS */
+
