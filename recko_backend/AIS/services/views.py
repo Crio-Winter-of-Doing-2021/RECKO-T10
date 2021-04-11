@@ -9,7 +9,7 @@ from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
-from .serializers import EmptySerializer,DataSerializer, XeroSerializer, XNestedSerializer1, QuickBooksSerializer,QuickBooksSerializer1, XNestedSerializer3,QNestedSerializer1,QNestedSerializer2,QNestedSerializer3,QNestedSerializer4
+from .serializers import EmptySerializer, DataSerializer, XeroSerializer, XNestedSerializer1, QuickBooksSerializer, QuickBooksSerializer1, XNestedSerializer3, QNestedSerializer1, QNestedSerializer2, QNestedSerializer3, QNestedSerializer4
 
 from django.core.cache import cache
 from django.shortcuts import render, redirect
@@ -29,161 +29,38 @@ import base64
 import schedule
 import time
 
-from .quickbooks_helper import constructUrl,quickbooksDataEntry
-from .xero_helper import constructXeroUrl, XeroRefreshToken, XeroTenants,xeroDataEntry
+from .quickbooks_helper import constructUrl, quickbooksDataEntry
+from .xero_helper import constructXeroUrl, XeroRefreshToken, XeroTenants, xeroDataEntry
 
 from .models import Accounts
 
 
-
 # Create your views here.
-from django.contrib.auth import get_user_model,logout
+from django.contrib.auth import get_user_model, logout
 from django.core.exceptions import ImproperlyConfigured
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
-from rest_framework.permissions import AllowAny,IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
 from . import serializers
-from users.utils import get_and_authenticate_user,create_user_account
+from users.utils import get_and_authenticate_user, create_user_account
 from users.models import CustomUser
 from datetime import date
 
 
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from functools import reduce
+from django.db.models import Q
+from django.http import JsonResponse
+from django.core import serializers
+from operator import and_
+
+
+from .queryGen import queryset_generator
+
+
 User = get_user_model()
-
-
-"""
-############################     QUICKBOOKS CREDENTIALS     ############################
-
-client_id1 = "AB1CT9l9mtRkuGnS9w9hASGJtnHTL0JhDggPIPM3gJy2W6gQAy"
-client_secret1 = "GG6jhkVesyPyowXBYg9UVlGO1eJF3CUvEhXxfCiS"
-redirect_uri1 = "http://localhost:8000/callback"
-environment = "sandbox"
-scopes = [
-    Scopes.ACCOUNTING,
-]
-auth_client = AuthClient(client_id1, client_secret1, redirect_uri1,
-                         environment)
-#########################################################################################
-
-############################      XERO CREDENTIALS    ###################################
-
-client_id = '53CA5E526A9C41AB91C216CC29C0A535'
-client_secret = 'vh7Kar4K4FvGrbugjfzzEPCUvLD2t2b-p9SmLIR5cng30FgH'
-redirect_url = 'http://localhost:8000/xero_callback'
-
-scope = 'offline_access accounting.journals.read'
-b64_id_secret = base64.b64encode(
-    bytes(client_id + ':' + client_secret, 'utf-8')).decode('utf-8')
-
-#########################################################################################
-
-#################################### QUICKBOOKS API CALL #########################################
-def quickbook(request):
-    url = auth_client.get_authorization_url(scopes)
-    return redirect(url)
-
-
-def callback(request):
-    auth_code = request.GET.get('code', None)
-    realm_id = request.GET.get('realmId', None)
-    print("Auth code", " ", auth_code)
-    print("Relam id", " ", realm_id)
-    auth_client.get_bearer_token(auth_code, realm_id=realm_id)
-    access_token = auth_client.access_token
-    refresh_token = auth_client.refresh_token
-    print(refresh_token)
-    fetchUrl = reverse('qbo')
-    return redirect(fetchUrl)#HttpResponse("QuickBooks Authentication Done!!")
-
-
-def fetchQboData(request):
-    #map quickbooks data to serializer and store in database/update existing data in database
-    #if auth_client.access_token is None:
-    if auth_client.refresh_token is None:
-        getNewTokenUrl = reverse('quickbook')
-        return HttpResponseRedirect(getNewTokenUrl)
-    else:
-        auth_client.refresh()
-
-    #call construct url function in quickbooks_helper.py
-    response = constructUrl(auth_client.access_token, auth_client.realm_id)
-    r1=response.json()
-
-    rt_file = open('quickbooks_response.json', 'w')
-    rt_file.write(response.text)
-    rt_file.close()
-
-                
-
-    serializer=QuickBooksSerializer(data=r1)
-    if serializer.is_valid():
-        quickbooksDataEntry(r1)
-        return HttpResponse(response.text)
-    else:
-        print(serializer.errors)
-        return HttpResponse(serializer.errors)
-    
-####################################################  XERO API CALL ################################################
-
-def xero(request):
-    auth_url = ('''https://login.xero.com/identity/connect/authorize?''' +
-                '''response_type=code''' + '''&client_id=''' + client_id +
-                '''&redirect_uri=''' + redirect_url + '''&scope=''' + scope +
-                '''&state=123''')  ##can be put in xero_helper.py
-    return redirect(auth_url)
-
-
-def xero_callback(request):
-    auth_code = request.GET.get('code', None)
-    print(auth_code)
-
-    ################################################################################
-    exchange_code_url = 'https://identity.xero.com/connect/token'
-    response = requests.post(
-        exchange_code_url,
-        headers={'Authorization': 'Basic ' + b64_id_secret},
-        data={
-            'grant_type': 'authorization_code',
-            'code': auth_code,
-            'redirect_uri': redirect_url
-        })
-    ###################################################################################
-    json_response = response.json()
-    print(json_response)
-
-    refresh_token = json_response['refresh_token']
-
-    rt_file = open('refresh_token.txt', 'w')
-    rt_file.write(refresh_token)
-    rt_file.close()
-
-    access_token = json_response['access_token']
-    print(refresh_token)
-
-    rt_file = open('access_token.txt', 'w')
-    rt_file.write(access_token)
-    rt_file.close()
-    return HttpResponse("Xero Authentication Done!!!")
-
-
-def fetchXeroData(request):
-    old_refresh_token = open('refresh_token.txt', 'r').read()
-    new_tokens = XeroRefreshToken(old_refresh_token)
-    xero_tenant_id = XeroTenants(new_tokens[0])
-
-    response = constructXeroUrl(new_tokens[0], xero_tenant_id)
-    r = response.json() 
-
-    serializer=XeroSerializer(data=r)
-    if serializer.is_valid():
-        xeroDataEntry(r)
-        return HttpResponse(response.text)
-    else:
-        return HttpResponse(serializer.errors)
-
-"""
 
 
 class TransactionViewSet(viewsets.GenericViewSet):
@@ -193,79 +70,183 @@ class TransactionViewSet(viewsets.GenericViewSet):
     serializer_class = EmptySerializer
     serializer_classes = {
         'transactions': EmptySerializer,
+        'getTotalRecs':EmptySerializer,
+        'transactionsPaginated': EmptySerializer,
         'filterByDate': EmptySerializer,
         'filterByType': EmptySerializer,
         'filterByAccName': EmptySerializer,
+        'xeroAccounts': EmptySerializer,
+        'xeroUsers': EmptySerializer
     }
 
-    queryset=''
+    queryset = ''
 
-    @action(methods=['GET'], detail=False, permission_classes=[
+    @action(methods=['GET','POST'], detail=False, permission_classes=[
         IsAuthenticated,
     ])
     def transactions(self, request):
         #returns data from our database
-        queryset=Accounts.objects.values('accountId','accountName','amount','date','accountType','providerName')
-        serializer=DataSerializer(queryset,many=True)
-        return Response(serializer.data,status=status.HTTP_200_OK)
+        accName=request.data['accName']
+        openAmt=request.data['stAmt']
+        closeAmt=request.data['endAmt']
+        stDate=request.data['stDate']
+        endDate=request.data['endDate']
+        de=request.data['de']
+        cr=request.data['cr']
 
+        queryset=queryset_generator(accName,openAmt,closeAmt,stDate,endDate,de,cr)
+        serializer=DataSerializer(queryset,many=True)
+        return Response(serializer.data,status.HTTP_200_OK)
+
+
+    @action(methods=['GET'], detail=False, permission_classes=[
+        IsAuthenticated,
+    ])
+    def getTotalRecs(self, request):
+        #returns data from our database
+        num=Accounts.objects.all().count()
+        print(num)
+        num1=Accounts.objects.count()
+        print(num1)
+        sets=1
+        total=num1
+        num2=num1
+        if num1%100==num1:
+            sets=1
+        else:
+            cnt=divmod(num1, 100)           
+            sets=cnt[0] if cnt[1]==0 else cnt[0]+1
+        return Response(data={"sets":sets,"totalRecords":total,"lastSet":cnt[1]},status=status.HTTP_200_OK)
+
+
+
+
+    @action(methods=['GET'], detail=False, permission_classes=[
+        IsAuthenticated,
+    ])
+    def transactionsPaginated(self, request):
+        print(request.data)
+        fields=['accountId','accountName','amount','accountType','date']
+        dt = (request.GET)
+        draw = int(dt.get('draw'))
+        start = int(dt.get('start'))
+        length = int(dt.get('length'))
+        search = dt.get('search[value]')
+        colOrder=int(dt.get('order[0][column]'))
+        field='accountId'
+        if colOrder >=0:
+            if dt.get('order[0][dir]') == 'asc':
+                field=fields[colOrder]
+            else:
+                field="-"+fields[colOrder]
+
+        print(field)
+        records_total = Accounts.objects.all().exclude(Q(accountId=None) | Q(
+            accountName=None) | Q(amount=None) | Q(accountType=None) | Q(date=None)).count()
+        records_filtered = records_total
+        accounts = Accounts.objects.all().order_by(field)
+        if search:
+            accounts = Accounts.objects.filter(
+                    Q(accountId__icontains=search) |
+                    Q(accountName__icontains=search) |
+                    Q(amount__icontains=search) |
+                    Q(accountType__icontains=search) |
+                    Q(date__icontains=search)
+                ).order_by(field)
+            records_total = accounts.count()
+            records_filtered = records_total
+
+           
+        paginator = Paginator(accounts, length)
+        pg=start / length + 1
+
+        try:
+            object_list = paginator.page(pg).object_list
+        except PageNotAnInteger:
+            object_list = paginator.page(1).object_list
+        except EmptyPage:
+            object_list = paginator.page(paginator.num_pages).object_list
+
+        
+
+        data = [
+            {
+                'accountId': inv.accountId,
+                'accountName': inv.accountName,
+                'amount': inv.amount,
+                'accountType': inv.accountType,
+                'date': inv.date,
+            } for inv in object_list
+        ]
+
+        print(records_filtered," ",records_total," ",len(data))
+
+        return Response(data={
+            'draw': draw,
+            'recordsTotal': records_total,
+            'recordsFiltered': records_filtered,
+            'data': data,
+        }, status=status.HTTP_200_OK)
+
+
+
+
+
+
+############################# ADDITIONAL APIs FOR FUTURE INTEGRATION PURPOSES #########################################
     @action(methods=['POST'], detail=False, permission_classes=[
         IsAuthenticated,
     ])
     def filterByDate(self, request):
-        
-        startDate=request.data['startDate']
-        endDate=request.data['endDate']
+
+        startDate = request.data['startDate']
+        endDate = request.data['endDate']
         if startDate > endDate:
-            return Response({"message":"Start date cannot be before end date"},status.HTTP_400_BAD_REQUEST)
-        
-        if endDate is None or len(endDate) ==0:
-            endDate=datetime.now()
+            return Response({"message": "Start date cannot be before end date"}, status.HTTP_400_BAD_REQUEST)
 
-        if startDate is None or len(endDate) ==0:
-            return Response({"message":"Please specify a start date"},status.HTTP_400_BAD_REQUEST)
+        if endDate is None or len(endDate) == 0:
+            endDate = datetime.now()
 
-        queryset=Accounts.objects.filter(date__range=[startDate,endDate])
-        serializer=DataSerializer(queryset,many=True)
-        
-        if len(serializer.data)==0:
-            return Response({"message":"No transaction records found"},status=status.HTTP_404_NOT_FOUND)
-        return Response(serializer.data,status.HTTP_200_OK)
-        
+        if startDate is None or len(endDate) == 0:
+            return Response({"message": "Please specify a start date"}, status.HTTP_400_BAD_REQUEST)
+
+        queryset = Accounts.objects.filter(date__range=[startDate, endDate])
+        serializer = DataSerializer(queryset, many=True)
+
+        if len(serializer.data) == 0:
+            return Response({"message": "No transaction records found"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(serializer.data, status.HTTP_200_OK)
 
     @action(methods=['POST'], detail=False, permission_classes=[
         AllowAny,
     ])
     def filterByType(self, request):
-        
-        accType=request.data['type']
-        
 
-        if accType is None or len(accType) ==0:
-            return Response({"message":"Invalid transaction type"},status.HTTP_400_BAD_REQUEST)
+        accType = request.data['type']
 
-        queryset=Accounts.objects.filter(accountType=accType)
-        serializer=DataSerializer(queryset,many=True)
-        
-        return Response(serializer.data,status.HTTP_200_OK)
-        
+        if accType is None or len(accType) == 0:
+            return Response({"message": "Invalid transaction type"}, status.HTTP_400_BAD_REQUEST)
+
+        queryset = Accounts.objects.filter(accountType=accType)
+        serializer = DataSerializer(queryset, many=True)
+
+        return Response(serializer.data, status.HTTP_200_OK)
 
     @action(methods=['POST'], detail=False, permission_classes=[
         AllowAny,
     ])
     def filterByAccName(self, request):
-        accname=request.data['accountName']
+        accname = request.data['accountName']
 
         if accname is None or len(accname) == 0:
-            return Response({"message":"Account Name cannot be blank"},status.HTTP_400_BAD_REQUEST)
+            return Response({"message": "Account Name cannot be blank"}, status.HTTP_400_BAD_REQUEST)
 
-        queryset=Accounts.objects.filter(accountName=accname)
-        serializer=DataSerializer(queryset,many=True)
-        
-        if len(serializer.data)==0:
-            return Response({"message":"No matching account name found"},status=status.HTTP_404_NOT_FOUND)
-        return Response(serializer.data,status.HTTP_200_OK)
-        
+        queryset = Accounts.objects.filter(accountName=accname)
+        serializer = DataSerializer(queryset, many=True)
+
+        if len(serializer.data) == 0:
+            return Response({"message": "No matching account name found"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(serializer.data, status.HTTP_200_OK)
 
     def get_serializer_class(self):
         if not isinstance(self.serializer_classes, dict):

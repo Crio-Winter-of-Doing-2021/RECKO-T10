@@ -82,12 +82,39 @@ span.num {
   right: 2px;
 }
 
+
+
+@media only screen and (max-width: 480px) {
+  .header-icon i {
+      padding: 10px 4px;
+  }
+  .l-side-box {
+      display: none;
+  }
+  .main-box {
+      /* margin: 50px 0 150px 0; */
+      margin: 30px 0 150px 0;
+  }
+  .shdl-table-box {
+
+      overflow-x: auto;
+  }
+
+  body {
+      font-family: 'Lato', sans-serif;
+  }
+
+  .login-img1{
+      margin-left: 0px;
+  }
+}
+
 </style>
 
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(to top, #4fb0ff, #036077)">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(to top, #4fb0ff, #42b7d4)">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -130,14 +157,14 @@ span.num {
                 </a>
               </li>
 
-              <li class="nav-item active"  id="notification" name="notification">
+              <!--li class="nav-item active"  id="notification" name="notification">
                 <a class="nav-link fa fa-bell"  style="cursor: pointer;" href="https://google.com">
                   <div><span class="fa fa-comment"></span> 
                   <span class="num">2</span>
                 </div>
                 </a> 
                
-              </li>
+              </li-->
           
           
         </ul>
@@ -186,9 +213,31 @@ span.num {
 
     <hr>
     <div class="col-md-6">
+      <p style="font-size:xx-large;">Connect to Quickbooks or Xero to fetch data from an organization</p>
       <a class="btn btn-lg btn-success btn-block" href="http://127.0.0.1:8000/quickbook">Connect to Quickbooks</a>&nbsp;&nbsp;
       <a class="btn btn-lg btn-danger btn-block" href="http://127.0.0.1:8000/xero">Connect to Xero</a>
+      <br><br><br><br>
     </div>
+    <hr>
+
+    <div class="col-md-6">
+      <p style="font-size:xx-large;">Add,Delete or Modify Xero or Quickbooks Accounts</p>
+      <button class="btn btn-lg btn-success btn-block" onclick='quickbookAccounts()'>Add,Delete or Configure multiple Quickbooks accounts</button>&nbsp;&nbsp;
+      <button class="btn btn-lg btn-danger btn-block" onclick='xeroAccounts()'>Add,Delete or Configure multiple Xero accounts</button>
+      <br><br><br><br>
+    </div>
+  
+    <hr>
+
+    <div class="col-md-6">
+      <p style="font-size:xx-large;">Add,Delete Users to/from  Xero or Quickbooks organization</p>
+      <button class="btn btn-lg btn-success btn-block" onclick="quickbookUsers()">Add,Delete Users to/from Quickbooks organization</button>&nbsp;&nbsp;
+      <button class="btn btn-lg btn-danger btn-block" onclick="xeroUsers()">Add,Delete Users to/from Xero organization</button>
+      <br><br><br><br>
+    </div>
+  
+    <hr>
+
    
 
 </div>

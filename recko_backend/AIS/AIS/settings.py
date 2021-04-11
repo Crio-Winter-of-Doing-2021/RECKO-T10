@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'users',
     'services',
     'quickbooks',
-    'xeroApp'
+    'xeroApp',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -135,7 +136,7 @@ CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
         'LOCATION': 'cache',
-        'TIMEOUT': '3000000',
+        'TIMEOUT': None,
         'OPTIONS': {
             'MAX_ENTRIES': 10000000
         }

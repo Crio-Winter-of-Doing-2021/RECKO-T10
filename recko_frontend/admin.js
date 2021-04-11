@@ -1,4 +1,4 @@
-if(localStorage.getItem('auth')===null){
+if(sessionStorage.getItem('auth')===null){
   window.location.href="login.html";
 }
 var offline=false;
@@ -18,7 +18,7 @@ offline=!offline;
  }
 }else{
   
-  document.getElementById('connectionStatus').innerHTML="<br><span class='btn btn-outline-danger'>Oops!! You are offline!</div>";
+  document.getElementById('connectionStatus').innerHTML="<br><span class='btn btn-outline-danger'>Oops!! You are offline!You cannot make any request to the server now!</div>";
   offline=!offline;
 }
 
@@ -27,7 +27,7 @@ offline=!offline;
 function grant_revoke(id,privilege){
   var access=!privilege;
   var token="Token ";
-  var token1=localStorage.getItem('auth');
+  var token1=sessionStorage.getItem('auth');
   var authorization=token.concat(token1);
   fetch('http://127.0.0.1:8000/privilegeAuth/', {
     method: "PATCH",
@@ -94,9 +94,9 @@ function logout(){
       type: "POST",
       url: "http://127.0.0.1:8000/logout/",
       success: function (data) {
-        localStorage.removeItem('name');
-        localStorage.removeItem('adminPrivilege');
-        localStorage.removeItem('auth','');
+        sessionStorage.removeItem('name');
+        sessionStorage.removeItem('adminPrivilege');
+        sessionStorage.removeItem('auth','');
         window.location.href="login.html";
    
       },
@@ -110,7 +110,7 @@ function logout(){
 
   function loadUsers() {
     var token="Token ";
-    var token1=localStorage.getItem('auth');
+    var token1=sessionStorage.getItem('auth');
     console.log(token1);
     var authorization=token.concat(token1);
     $.ajax({
@@ -129,3 +129,92 @@ function logout(){
     });
 
   }
+
+
+function quickbookAccounts(){
+  var token="Token ";
+    var token1=sessionStorage.getItem('auth');
+    console.log(token1);
+    var authorization=token.concat(token1);
+    $.ajax({
+      type: "GET",
+      url: "http://127.0.0.1:8000/quickbooksAccounts/",
+      headers: {"Authorization": authorization},
+      success: function (data) {
+        console.log(data);
+        window.location.href=data['url'];
+        
+   
+      },
+      error: function (response) {
+        alert(response["statusText"]);
+      },
+    });
+}
+
+
+function xeroAccounts(){
+  var token="Token ";
+    var token1=sessionStorage.getItem('auth');
+    console.log(token1);
+    var authorization=token.concat(token1);
+    $.ajax({
+      type: "GET",
+      url: "http://127.0.0.1:8000/xeroAccounts/",
+      headers: {"Authorization": authorization},
+      success: function (data) {
+        console.log(data);
+        window.location.href=data['url'];
+        
+   
+      },
+      error: function (response) {
+        alert(response["statusText"]);
+      },
+    });
+}
+
+
+
+function xeroUsers(){
+  var token="Token ";
+    var token1=sessionStorage.getItem('auth');
+    console.log(token1);
+    var authorization=token.concat(token1);
+    $.ajax({
+      type: "GET",
+      url: "http://127.0.0.1:8000/xeroUsers/",
+      headers: {"Authorization": authorization},
+      success: function (data) {
+        console.log(data);
+        window.location.href=data['url'];
+        
+   
+      },
+      error: function (response) {
+        alert(response["statusText"]);
+      },
+    });
+}
+
+
+function quickbookUsers(){
+  var token="Token ";
+    var token1=sessionStorage.getItem('auth');
+    console.log(token1);
+    var authorization=token.concat(token1);
+    $.ajax({
+      type: "GET",
+      url: "http://127.0.0.1:8000/quickbooksUsers/",
+      headers: {"Authorization": authorization},
+      success: function (data) {
+        console.log(data);
+        window.location.href=data['url'];
+        
+   
+      },
+      error: function (response) {
+        alert(response["statusText"]);
+      },
+    });
+}

@@ -28,9 +28,11 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('quickbooks.urls')),
     path('', include('xeroApp.urls')),
+    path('', include('pwa.urls')),
 ]
 if settings.DEBUG:
    import debug_toolbar
    urlpatterns += [
        url(r'^debug', include(debug_toolbar.urls)),
+       
    ]
