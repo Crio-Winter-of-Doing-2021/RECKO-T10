@@ -26,6 +26,7 @@ function connectionUpdate(event) {
 
 /*  ##############################################################################################      */
 
+
 function loop(data,str){
   var i;
   var c=1;
@@ -54,7 +55,8 @@ $(document).on('change', 'select', function() {
 
   // if you want to do stuff based on the OPTION element:
   var opt = $(this).find('option:selected')[0];
-  // use switch or if/else etc.
+  var set=$(this).val();
+  
 });
 
 function totalRec(){
@@ -77,8 +79,6 @@ function totalRec(){
     },
   });
 
-
-
 }
 
 
@@ -90,6 +90,7 @@ window.onload = function(){
     document.getElementById("admin").style.display = "block";
   }
   //$('#myModal').modal('show');
+
   totalRec();
   load();
 }
