@@ -79,6 +79,7 @@ function totalRec(){
     },
   });
 
+
 }
 
 
@@ -90,7 +91,6 @@ window.onload = function(){
     document.getElementById("admin").style.display = "block";
   }
   //$('#myModal').modal('show');
-
   totalRec();
   load();
 }
