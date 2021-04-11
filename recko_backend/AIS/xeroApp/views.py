@@ -43,6 +43,7 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
+from django.template import Context, loader
 
 from . import serializers
 from users.utils import get_and_authenticate_user, create_user_account
@@ -110,8 +111,8 @@ def xero_callback(request):
     rt_file.write(access_token)
     rt_file.close()
     cache.set('access_token',access_token)
-    return HttpResponse("Xero Authentication Done!!! Close this page and login again!")
-
+    template = loader.get_template("static/redirectX.html")
+    return HttpResponse(template.render())
 
 def fetchXeroData(request):
     old_refresh_token =cache.get('refresh_token') #open('refresh_token.txt', 'r').read() 
@@ -148,7 +149,9 @@ def fetchXeroData(request):
             print("ERROR")
         offset += 100
     msg="You can close this window now and login again!!"
-    return HttpResponse(msg)
+    template = loader.get_template("static/redirectX.html")
+    return HttpResponse(template.render())
+
     
 
 

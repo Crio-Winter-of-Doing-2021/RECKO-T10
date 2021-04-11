@@ -65,9 +65,11 @@ def XeroTenants(access_token):
                                 'Content-Type': 'application/json'
                             })
     json_response = response.json()
-
+    print(json_response)
     for tenants in json_response:
         json_dict = tenants
+        return json_dict['tenantId']
+    #print(json_dict)
     return json_dict['tenantId']
 
 

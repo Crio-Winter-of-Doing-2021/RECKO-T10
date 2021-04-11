@@ -15,6 +15,7 @@ from django.core.cache import cache
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseServerError, HttpResponseRedirect
+from django.template import Context, loader
 
 from intuitlib.client import AuthClient
 from intuitlib.enums import Scopes
@@ -127,7 +128,8 @@ def fetchQboData(request):
         
         startposition=startposition+maxresults
         msg="You can close this window now and login again!!"
-    return HttpResponse(msg)
+        template = loader.get_template("static/redirectQ.html")
+    return HttpResponse(template.render())
 
 
                 
