@@ -19,7 +19,7 @@ from dateutil.parser import parse
 
 from django.core.cache import cache
 
-from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1, XNestedSerializer3
+from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1, XNestedSerializer3,XNestedSerializer4
 
 from services.models import Accounts
 from django.core.management.base import BaseCommand
@@ -89,8 +89,9 @@ def constructXeroUrl(access_token, tid,offset):
 def xeroDataEntry(response):
     for obj in response['Journals']:
         list1 = []
-
+        extra={}
         dt = datetime.fromtimestamp(int(obj['JournalDate'][6:-10]))
+        extra['JournalNumber']=obj['JournalNumber']
         date = dt.strftime('%Y-%m-%d')
         for journalLine in obj['JournalLines']:
             s1 = XNestedSerializer3(data=journalLine)
@@ -102,15 +103,24 @@ def xeroDataEntry(response):
 
                 net = s1.data.get('NetAmount')
                 if net < 0:
-                    print("Type: Credit")
                     accType = "Credit"
                 else:
-                    print("Type: Debit")
                     accType = "Debit"
 
+
+                extra['AccountID']=s1.data.get('AccountID')
+                extra['AccountType']=s1.data.get('AccountType')
+                extra['TaxAmount']=s1.data.get('TaxAmount')
+                
+                extraField=json.dumps(extra,indent=4)
+                print(extra,"\n")
                 if Accounts.objects.filter(accountName=accountName, accountId=accountId, amount=amount, date=date, accountType=accType, providerName="Xero").exists() is False:
                     record = Accounts(accountName=accountName, accountId=accountId,
-                                      amount=amount, date=date, accountType=accType, providerName="Xero")
+                                      amount=amount, date=date, accountType=accType, providerName="Xero",extraFields=extraField)
+                    record.save()
+                else:
+                    record=Accounts.objects.filter(accountName=accountName, accountId=accountId, amount=amount, date=date, accountType=accType, providerName="Xero")[0]
+                    record.extraFields=extraField
                     record.save()
 
                 list1.append(s1.data)

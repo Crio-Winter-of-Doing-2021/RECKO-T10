@@ -14,7 +14,13 @@ class EmptySerializer(serializers.ModelSerializer):
     pass
 
 ###########################################  XERO JOURNAL SERIALIZER  #######################################################
-    
+class XNestedSerializer4(serializers.Serializer):
+    Name=serializers.CharField()
+    Option=serializers.CharField()
+    TrackingCategoryID=serializers.CharField()
+    TrackingOptionID=serializers.CharField()
+
+
 class XNestedSerializer3(serializers.Serializer):  
     TaxType=serializers.SerializerMethodField()
     TaxName=serializers.SerializerMethodField()
@@ -27,9 +33,11 @@ class XNestedSerializer3(serializers.Serializer):
     GrossAmount=serializers.FloatField()
     TaxAmount=serializers.FloatField()
     
+    
 
     def get_TaxName(self,obj):
         if hasattr(obj,'TaxName'):
+            print('TaxName')
             return obj.TaxName
         else:
             return "Null"

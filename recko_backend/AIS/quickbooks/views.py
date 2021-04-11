@@ -125,6 +125,8 @@ def fetchQboData(request):
             quickbooksDataEntry(r1)
         else:
             print(serializer.errors)
+            template = loader.get_template("static/error.html")
+            return HttpResponse(template.render())
         
         startposition=startposition+maxresults
         msg="You can close this window now and login again!!"

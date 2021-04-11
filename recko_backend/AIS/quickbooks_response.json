@@ -13,7 +13,10 @@
         },
         "DocNumber": "8",
         "TxnDate": "2021-02-07",
-        "CurrencyRef": { "value": "GBP", "name": "British Pound Sterling" },
+        "CurrencyRef": {
+          "value": "GBP",
+          "name": "British Pound Sterling"
+        },
         "ExchangeRate": 1,
         "Line": [
           {
@@ -23,7 +26,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Debit",
-              "AccountRef": { "value": "18", "name": "Depreciation Expense" }
+              "AccountRef": {
+                "value": "18",
+                "name": "Depreciation Expense"
+              }
             }
           },
           {
@@ -33,7 +39,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Debit",
-              "AccountRef": { "value": "18", "name": "Depreciation Expense" }
+              "AccountRef": {
+                "value": "18",
+                "name": "Depreciation Expense"
+              }
             }
           },
           {
@@ -43,7 +52,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Credit",
-              "AccountRef": { "value": "3", "name": "Accumulated Depreciation" }
+              "AccountRef": {
+                "value": "3",
+                "name": "Accumulated Depreciation"
+              }
             }
           }
         ],
@@ -60,7 +72,10 @@
           "LastUpdatedTime": "2020-11-29T23:51:22-08:00"
         },
         "TxnDate": "2020-11-30",
-        "CurrencyRef": { "value": "GBP", "name": "British Pound Sterling" },
+        "CurrencyRef": {
+          "value": "GBP",
+          "name": "British Pound Sterling"
+        },
         "ExchangeRate": 1,
         "PrivateNote": "Filed VAT",
         "Line": [
@@ -71,7 +86,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Debit",
-              "AccountRef": { "value": "53", "name": "VAT Control" }
+              "AccountRef": {
+                "value": "53",
+                "name": "VAT Control"
+              }
             }
           },
           {
@@ -81,7 +99,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Credit",
-              "AccountRef": { "value": "54", "name": "VAT Suspense" }
+              "AccountRef": {
+                "value": "54",
+                "name": "VAT Suspense"
+              }
             }
           }
         ],
@@ -98,7 +119,10 @@
           "LastUpdatedTime": "2020-11-29T23:50:39-08:00"
         },
         "TxnDate": "2020-11-30",
-        "CurrencyRef": { "value": "GBP", "name": "British Pound Sterling" },
+        "CurrencyRef": {
+          "value": "GBP",
+          "name": "British Pound Sterling"
+        },
         "ExchangeRate": 1,
         "PrivateNote": "Filed VAT",
         "Line": [
@@ -109,7 +133,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Debit",
-              "AccountRef": { "value": "53", "name": "VAT Control" }
+              "AccountRef": {
+                "value": "53",
+                "name": "VAT Control"
+              }
             }
           },
           {
@@ -119,7 +146,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Credit",
-              "AccountRef": { "value": "54", "name": "VAT Suspense" }
+              "AccountRef": {
+                "value": "54",
+                "name": "VAT Suspense"
+              }
             }
           }
         ],
@@ -137,7 +167,10 @@
         },
         "DocNumber": "7",
         "TxnDate": "2019-11-08",
-        "CurrencyRef": { "value": "GBP", "name": "British Pound Sterling" },
+        "CurrencyRef": {
+          "value": "GBP",
+          "name": "British Pound Sterling"
+        },
         "ExchangeRate": 1,
         "Line": [
           {
@@ -147,7 +180,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Debit",
-              "AccountRef": { "value": "18", "name": "Depreciation Expense" }
+              "AccountRef": {
+                "value": "18",
+                "name": "Depreciation Expense"
+              }
             }
           },
           {
@@ -157,7 +193,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Debit",
-              "AccountRef": { "value": "18", "name": "Depreciation Expense" }
+              "AccountRef": {
+                "value": "18",
+                "name": "Depreciation Expense"
+              }
             }
           },
           {
@@ -167,7 +206,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Credit",
-              "AccountRef": { "value": "3", "name": "Accumulated Depreciation" }
+              "AccountRef": {
+                "value": "3",
+                "name": "Accumulated Depreciation"
+              }
             }
           }
         ],
@@ -185,7 +227,10 @@
         },
         "DocNumber": "6",
         "TxnDate": "2020-08-08",
-        "CurrencyRef": { "value": "GBP", "name": "British Pound Sterling" },
+        "CurrencyRef": {
+          "value": "GBP",
+          "name": "British Pound Sterling"
+        },
         "ExchangeRate": 1,
         "Line": [
           {
@@ -195,7 +240,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Debit",
-              "AccountRef": { "value": "18", "name": "Depreciation Expense" }
+              "AccountRef": {
+                "value": "18",
+                "name": "Depreciation Expense"
+              }
             }
           },
           {
@@ -205,7 +253,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Debit",
-              "AccountRef": { "value": "18", "name": "Depreciation Expense" }
+              "AccountRef": {
+                "value": "18",
+                "name": "Depreciation Expense"
+              }
             }
           },
           {
@@ -215,7 +266,10 @@
             "DetailType": "JournalEntryLineDetail",
             "JournalEntryLineDetail": {
               "PostingType": "Credit",
-              "AccountRef": { "value": "3", "name": "Accumulated Depreciation" }
+              "AccountRef": {
+                "value": "3",
+                "name": "Accumulated Depreciation"
+              }
             }
           }
         ],
@@ -228,4 +282,2321 @@
   },
   "time": "2021-03-24T00:37:03.769-07:00"
 }
-{"QueryResponse":{"JournalEntry":[{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"151","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T07:58:42-08:00","LastUpdatedTime":"2021-03-08T07:58:42-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"150","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T00:25:15-08:00","LastUpdatedTime":"2021-03-08T00:25:15-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"149","SyncToken":"0","MetaData":{"CreateTime":"2021-03-07T06:34:08-08:00","LastUpdatedTime":"2021-03-07T06:34:08-08:00"},"TxnDate":"2021-03-07","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"148","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T08:10:01-08:00","LastUpdatedTime":"2021-03-06T08:10:01-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"147","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:48:15-08:00","LastUpdatedTime":"2021-03-06T07:48:15-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"146","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:07:24-08:00","LastUpdatedTime":"2021-03-06T07:07:24-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"145","SyncToken":"0","MetaData":{"CreateTime":"2021-03-03T09:57:31-08:00","LastUpdatedTime":"2021-03-03T09:57:31-08:00"},"TxnDate":"2021-03-03","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"8","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:04:24-08:00","LastUpdatedTime":"2021-02-01T10:04:24-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"7","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:03:25-08:00","LastUpdatedTime":"2021-02-01T10:03:25-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"43","name":"Loan Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"6","SyncToken":"0","MetaData":{"CreateTime":"2021-01-31T12:11:06-08:00","LastUpdatedTime":"2021-01-31T12:11:06-08:00"},"TxnDate":"2021-01-19","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"38","name":"Truck:Original Cost"}}},{"Id":"1","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}}],"startPosition":1,"maxResults":10,"totalCount":10},"time":"2021-04-11T01:27:45.247-07:00"}{"QueryResponse":{"JournalEntry":[{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"151","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T07:58:42-08:00","LastUpdatedTime":"2021-03-08T07:58:42-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"150","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T00:25:15-08:00","LastUpdatedTime":"2021-03-08T00:25:15-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"149","SyncToken":"0","MetaData":{"CreateTime":"2021-03-07T06:34:08-08:00","LastUpdatedTime":"2021-03-07T06:34:08-08:00"},"TxnDate":"2021-03-07","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"148","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T08:10:01-08:00","LastUpdatedTime":"2021-03-06T08:10:01-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"147","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:48:15-08:00","LastUpdatedTime":"2021-03-06T07:48:15-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"146","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:07:24-08:00","LastUpdatedTime":"2021-03-06T07:07:24-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"145","SyncToken":"0","MetaData":{"CreateTime":"2021-03-03T09:57:31-08:00","LastUpdatedTime":"2021-03-03T09:57:31-08:00"},"TxnDate":"2021-03-03","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"8","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:04:24-08:00","LastUpdatedTime":"2021-02-01T10:04:24-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"7","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:03:25-08:00","LastUpdatedTime":"2021-02-01T10:03:25-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"43","name":"Loan Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"6","SyncToken":"0","MetaData":{"CreateTime":"2021-01-31T12:11:06-08:00","LastUpdatedTime":"2021-01-31T12:11:06-08:00"},"TxnDate":"2021-01-19","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"38","name":"Truck:Original Cost"}}},{"Id":"1","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}}],"startPosition":1,"maxResults":10,"totalCount":10},"time":"2021-04-11T01:29:56.264-07:00"}{"QueryResponse":{"JournalEntry":[{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"151","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T07:58:42-08:00","LastUpdatedTime":"2021-03-08T07:58:42-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"150","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T00:25:15-08:00","LastUpdatedTime":"2021-03-08T00:25:15-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"149","SyncToken":"0","MetaData":{"CreateTime":"2021-03-07T06:34:08-08:00","LastUpdatedTime":"2021-03-07T06:34:08-08:00"},"TxnDate":"2021-03-07","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"148","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T08:10:01-08:00","LastUpdatedTime":"2021-03-06T08:10:01-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"147","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:48:15-08:00","LastUpdatedTime":"2021-03-06T07:48:15-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"146","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:07:24-08:00","LastUpdatedTime":"2021-03-06T07:07:24-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"145","SyncToken":"0","MetaData":{"CreateTime":"2021-03-03T09:57:31-08:00","LastUpdatedTime":"2021-03-03T09:57:31-08:00"},"TxnDate":"2021-03-03","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"8","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:04:24-08:00","LastUpdatedTime":"2021-02-01T10:04:24-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"7","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:03:25-08:00","LastUpdatedTime":"2021-02-01T10:03:25-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"43","name":"Loan Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"6","SyncToken":"0","MetaData":{"CreateTime":"2021-01-31T12:11:06-08:00","LastUpdatedTime":"2021-01-31T12:11:06-08:00"},"TxnDate":"2021-01-19","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"38","name":"Truck:Original Cost"}}},{"Id":"1","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}}],"startPosition":1,"maxResults":10,"totalCount":10},"time":"2021-04-11T01:30:10.439-07:00"}{"QueryResponse":{"JournalEntry":[{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"151","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T07:58:42-08:00","LastUpdatedTime":"2021-03-08T07:58:42-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"150","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T00:25:15-08:00","LastUpdatedTime":"2021-03-08T00:25:15-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"149","SyncToken":"0","MetaData":{"CreateTime":"2021-03-07T06:34:08-08:00","LastUpdatedTime":"2021-03-07T06:34:08-08:00"},"TxnDate":"2021-03-07","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"148","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T08:10:01-08:00","LastUpdatedTime":"2021-03-06T08:10:01-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"147","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:48:15-08:00","LastUpdatedTime":"2021-03-06T07:48:15-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"146","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:07:24-08:00","LastUpdatedTime":"2021-03-06T07:07:24-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"145","SyncToken":"0","MetaData":{"CreateTime":"2021-03-03T09:57:31-08:00","LastUpdatedTime":"2021-03-03T09:57:31-08:00"},"TxnDate":"2021-03-03","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"8","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:04:24-08:00","LastUpdatedTime":"2021-02-01T10:04:24-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"7","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:03:25-08:00","LastUpdatedTime":"2021-02-01T10:03:25-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"43","name":"Loan Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"6","SyncToken":"0","MetaData":{"CreateTime":"2021-01-31T12:11:06-08:00","LastUpdatedTime":"2021-01-31T12:11:06-08:00"},"TxnDate":"2021-01-19","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"38","name":"Truck:Original Cost"}}},{"Id":"1","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}}],"startPosition":1,"maxResults":10,"totalCount":10},"time":"2021-04-11T01:32:58.374-07:00"}{"QueryResponse":{"JournalEntry":[{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"151","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T07:58:42-08:00","LastUpdatedTime":"2021-03-08T07:58:42-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"150","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T00:25:15-08:00","LastUpdatedTime":"2021-03-08T00:25:15-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"149","SyncToken":"0","MetaData":{"CreateTime":"2021-03-07T06:34:08-08:00","LastUpdatedTime":"2021-03-07T06:34:08-08:00"},"TxnDate":"2021-03-07","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"148","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T08:10:01-08:00","LastUpdatedTime":"2021-03-06T08:10:01-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"147","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:48:15-08:00","LastUpdatedTime":"2021-03-06T07:48:15-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"146","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:07:24-08:00","LastUpdatedTime":"2021-03-06T07:07:24-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"145","SyncToken":"0","MetaData":{"CreateTime":"2021-03-03T09:57:31-08:00","LastUpdatedTime":"2021-03-03T09:57:31-08:00"},"TxnDate":"2021-03-03","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"8","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:04:24-08:00","LastUpdatedTime":"2021-02-01T10:04:24-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"7","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:03:25-08:00","LastUpdatedTime":"2021-02-01T10:03:25-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"43","name":"Loan Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"6","SyncToken":"0","MetaData":{"CreateTime":"2021-01-31T12:11:06-08:00","LastUpdatedTime":"2021-01-31T12:11:06-08:00"},"TxnDate":"2021-01-19","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"38","name":"Truck:Original Cost"}}},{"Id":"1","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}}],"startPosition":1,"maxResults":10,"totalCount":10},"time":"2021-04-11T01:43:25.881-07:00"}
+{
+  "QueryResponse": {
+    "JournalEntry": [
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "151",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T07:58:42-08:00",
+          "LastUpdatedTime": "2021-03-08T07:58:42-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "150",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T00:25:15-08:00",
+          "LastUpdatedTime": "2021-03-08T00:25:15-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "149",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-07T06:34:08-08:00",
+          "LastUpdatedTime": "2021-03-07T06:34:08-08:00"
+        },
+        "TxnDate": "2021-03-07",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "148",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T08:10:01-08:00",
+          "LastUpdatedTime": "2021-03-06T08:10:01-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "147",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:48:15-08:00",
+          "LastUpdatedTime": "2021-03-06T07:48:15-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "146",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:07:24-08:00",
+          "LastUpdatedTime": "2021-03-06T07:07:24-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "145",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-03T09:57:31-08:00",
+          "LastUpdatedTime": "2021-03-03T09:57:31-08:00"
+        },
+        "TxnDate": "2021-03-03",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "8",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:04:24-08:00",
+          "LastUpdatedTime": "2021-02-01T10:04:24-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "7",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:03:25-08:00",
+          "LastUpdatedTime": "2021-02-01T10:03:25-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "43",
+                "name": "Loan Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "6",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-01-31T12:11:06-08:00",
+          "LastUpdatedTime": "2021-01-31T12:11:06-08:00"
+        },
+        "TxnDate": "2021-01-19",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "38",
+                "name": "Truck:Original Cost"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      }
+    ],
+    "startPosition": 1,
+    "maxResults": 10,
+    "totalCount": 10
+  },
+  "time": "2021-04-11T01:27:45.247-07:00"
+}{
+  "QueryResponse": {
+    "JournalEntry": [
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "151",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T07:58:42-08:00",
+          "LastUpdatedTime": "2021-03-08T07:58:42-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "150",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T00:25:15-08:00",
+          "LastUpdatedTime": "2021-03-08T00:25:15-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "149",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-07T06:34:08-08:00",
+          "LastUpdatedTime": "2021-03-07T06:34:08-08:00"
+        },
+        "TxnDate": "2021-03-07",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "148",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T08:10:01-08:00",
+          "LastUpdatedTime": "2021-03-06T08:10:01-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "147",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:48:15-08:00",
+          "LastUpdatedTime": "2021-03-06T07:48:15-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "146",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:07:24-08:00",
+          "LastUpdatedTime": "2021-03-06T07:07:24-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "145",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-03T09:57:31-08:00",
+          "LastUpdatedTime": "2021-03-03T09:57:31-08:00"
+        },
+        "TxnDate": "2021-03-03",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "8",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:04:24-08:00",
+          "LastUpdatedTime": "2021-02-01T10:04:24-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "7",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:03:25-08:00",
+          "LastUpdatedTime": "2021-02-01T10:03:25-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "43",
+                "name": "Loan Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "6",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-01-31T12:11:06-08:00",
+          "LastUpdatedTime": "2021-01-31T12:11:06-08:00"
+        },
+        "TxnDate": "2021-01-19",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "38",
+                "name": "Truck:Original Cost"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      }
+    ],
+    "startPosition": 1,
+    "maxResults": 10,
+    "totalCount": 10
+  },
+  "time": "2021-04-11T01:29:56.264-07:00"
+}
+
+
+
+
+
+
+{
+  "QueryResponse": {
+    "JournalEntry": [
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "151",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T07:58:42-08:00",
+          "LastUpdatedTime": "2021-03-08T07:58:42-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "150",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T00:25:15-08:00",
+          "LastUpdatedTime": "2021-03-08T00:25:15-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "149",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-07T06:34:08-08:00",
+          "LastUpdatedTime": "2021-03-07T06:34:08-08:00"
+        },
+        "TxnDate": "2021-03-07",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "148",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T08:10:01-08:00",
+          "LastUpdatedTime": "2021-03-06T08:10:01-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "147",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:48:15-08:00",
+          "LastUpdatedTime": "2021-03-06T07:48:15-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "146",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:07:24-08:00",
+          "LastUpdatedTime": "2021-03-06T07:07:24-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "145",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-03T09:57:31-08:00",
+          "LastUpdatedTime": "2021-03-03T09:57:31-08:00"
+        },
+        "TxnDate": "2021-03-03",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "8",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:04:24-08:00",
+          "LastUpdatedTime": "2021-02-01T10:04:24-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "7",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:03:25-08:00",
+          "LastUpdatedTime": "2021-02-01T10:03:25-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "43",
+                "name": "Loan Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "6",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-01-31T12:11:06-08:00",
+          "LastUpdatedTime": "2021-01-31T12:11:06-08:00"
+        },
+        "TxnDate": "2021-01-19",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "38",
+                "name": "Truck:Original Cost"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      }
+    ],
+    "startPosition": 1,
+    "maxResults": 10,
+    "totalCount": 10
+  },
+  "time": "2021-04-11T01:30:10.439-07:00"
+}{
+  "QueryResponse": {
+    "JournalEntry": [
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "151",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T07:58:42-08:00",
+          "LastUpdatedTime": "2021-03-08T07:58:42-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "150",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T00:25:15-08:00",
+          "LastUpdatedTime": "2021-03-08T00:25:15-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "149",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-07T06:34:08-08:00",
+          "LastUpdatedTime": "2021-03-07T06:34:08-08:00"
+        },
+        "TxnDate": "2021-03-07",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "148",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T08:10:01-08:00",
+          "LastUpdatedTime": "2021-03-06T08:10:01-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "147",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:48:15-08:00",
+          "LastUpdatedTime": "2021-03-06T07:48:15-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "146",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:07:24-08:00",
+          "LastUpdatedTime": "2021-03-06T07:07:24-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "145",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-03T09:57:31-08:00",
+          "LastUpdatedTime": "2021-03-03T09:57:31-08:00"
+        },
+        "TxnDate": "2021-03-03",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "8",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:04:24-08:00",
+          "LastUpdatedTime": "2021-02-01T10:04:24-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "7",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:03:25-08:00",
+          "LastUpdatedTime": "2021-02-01T10:03:25-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "43",
+                "name": "Loan Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "6",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-01-31T12:11:06-08:00",
+          "LastUpdatedTime": "2021-01-31T12:11:06-08:00"
+        },
+        "TxnDate": "2021-01-19",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "38",
+                "name": "Truck:Original Cost"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      }
+    ],
+    "startPosition": 1,
+    "maxResults": 10,
+    "totalCount": 10
+  },
+  "time": "2021-04-11T01:32:58.374-07:00"
+}{
+  "QueryResponse": {
+    "JournalEntry": [
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "151",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T07:58:42-08:00",
+          "LastUpdatedTime": "2021-03-08T07:58:42-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "150",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-08T00:25:15-08:00",
+          "LastUpdatedTime": "2021-03-08T00:25:15-08:00"
+        },
+        "TxnDate": "2021-03-08",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "149",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-07T06:34:08-08:00",
+          "LastUpdatedTime": "2021-03-07T06:34:08-08:00"
+        },
+        "TxnDate": "2021-03-07",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "148",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T08:10:01-08:00",
+          "LastUpdatedTime": "2021-03-06T08:10:01-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "147",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:48:15-08:00",
+          "LastUpdatedTime": "2021-03-06T07:48:15-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "146",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-06T07:07:24-08:00",
+          "LastUpdatedTime": "2021-03-06T07:07:24-08:00"
+        },
+        "TxnDate": "2021-03-06",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "145",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-03-03T09:57:31-08:00",
+          "LastUpdatedTime": "2021-03-03T09:57:31-08:00"
+        },
+        "TxnDate": "2021-03-03",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "39",
+                "name": "Truck:Depreciation"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "nov portion of rider insurance",
+            "Amount": 100.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "8",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:04:24-08:00",
+          "LastUpdatedTime": "2021-02-01T10:04:24-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "44",
+                "name": "Notes Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 25000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "7",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-02-01T10:03:25-08:00",
+          "LastUpdatedTime": "2021-02-01T10:03:25-08:00"
+        },
+        "TxnDate": "2021-02-01",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "43",
+                "name": "Loan Payable"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 4000.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      },
+      {
+        "Adjustment": false,
+        "domain": "QBO",
+        "sparse": false,
+        "Id": "6",
+        "SyncToken": "0",
+        "MetaData": {
+          "CreateTime": "2021-01-31T12:11:06-08:00",
+          "LastUpdatedTime": "2021-01-31T12:11:06-08:00"
+        },
+        "TxnDate": "2021-01-19",
+        "CurrencyRef": {
+          "value": "USD",
+          "name": "United States Dollar"
+        },
+        "PrivateNote": "Opening Balance",
+        "Line": [
+          {
+            "Id": "0",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Debit",
+              "AccountRef": {
+                "value": "38",
+                "name": "Truck:Original Cost"
+              }
+            }
+          },
+          {
+            "Id": "1",
+            "Description": "Opening Balance",
+            "Amount": 13495.00,
+            "DetailType": "JournalEntryLineDetail",
+            "JournalEntryLineDetail": {
+              "PostingType": "Credit",
+              "AccountRef": {
+                "value": "34",
+                "name": "Opening Balance Equity"
+              }
+            }
+          }
+        ],
+        "TxnTaxDetail": {}
+      }
+    ],
+    "startPosition": 1,
+    "maxResults": 10,
+    "totalCount": 10
+  },
+  "time": "2021-04-11T01:43:25.881-07:00"
+}{"QueryResponse":{"JournalEntry":[{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"151","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T07:58:42-08:00","LastUpdatedTime":"2021-03-08T07:58:42-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"150","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T00:25:15-08:00","LastUpdatedTime":"2021-03-08T00:25:15-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"149","SyncToken":"0","MetaData":{"CreateTime":"2021-03-07T06:34:08-08:00","LastUpdatedTime":"2021-03-07T06:34:08-08:00"},"TxnDate":"2021-03-07","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"148","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T08:10:01-08:00","LastUpdatedTime":"2021-03-06T08:10:01-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"147","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:48:15-08:00","LastUpdatedTime":"2021-03-06T07:48:15-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"146","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:07:24-08:00","LastUpdatedTime":"2021-03-06T07:07:24-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"145","SyncToken":"0","MetaData":{"CreateTime":"2021-03-03T09:57:31-08:00","LastUpdatedTime":"2021-03-03T09:57:31-08:00"},"TxnDate":"2021-03-03","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"8","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:04:24-08:00","LastUpdatedTime":"2021-02-01T10:04:24-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"7","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:03:25-08:00","LastUpdatedTime":"2021-02-01T10:03:25-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"43","name":"Loan Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"6","SyncToken":"0","MetaData":{"CreateTime":"2021-01-31T12:11:06-08:00","LastUpdatedTime":"2021-01-31T12:11:06-08:00"},"TxnDate":"2021-01-19","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"38","name":"Truck:Original Cost"}}},{"Id":"1","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}}],"startPosition":1,"maxResults":10,"totalCount":10},"time":"2021-04-11T09:35:57.028-07:00"}{"QueryResponse":{"JournalEntry":[{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"151","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T07:58:42-08:00","LastUpdatedTime":"2021-03-08T07:58:42-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"150","SyncToken":"0","MetaData":{"CreateTime":"2021-03-08T00:25:15-08:00","LastUpdatedTime":"2021-03-08T00:25:15-08:00"},"TxnDate":"2021-03-08","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"149","SyncToken":"0","MetaData":{"CreateTime":"2021-03-07T06:34:08-08:00","LastUpdatedTime":"2021-03-07T06:34:08-08:00"},"TxnDate":"2021-03-07","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"148","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T08:10:01-08:00","LastUpdatedTime":"2021-03-06T08:10:01-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"147","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:48:15-08:00","LastUpdatedTime":"2021-03-06T07:48:15-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"146","SyncToken":"0","MetaData":{"CreateTime":"2021-03-06T07:07:24-08:00","LastUpdatedTime":"2021-03-06T07:07:24-08:00"},"TxnDate":"2021-03-06","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"145","SyncToken":"0","MetaData":{"CreateTime":"2021-03-03T09:57:31-08:00","LastUpdatedTime":"2021-03-03T09:57:31-08:00"},"TxnDate":"2021-03-03","CurrencyRef":{"value":"USD","name":"United States Dollar"},"Line":[{"Id":"0","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"39","name":"Truck:Depreciation"}}},{"Id":"1","Description":"nov portion of rider insurance","Amount":100.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"8","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:04:24-08:00","LastUpdatedTime":"2021-02-01T10:04:24-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"44","name":"Notes Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":25000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"7","SyncToken":"0","MetaData":{"CreateTime":"2021-02-01T10:03:25-08:00","LastUpdatedTime":"2021-02-01T10:03:25-08:00"},"TxnDate":"2021-02-01","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"43","name":"Loan Payable"}}},{"Id":"1","Description":"Opening Balance","Amount":4000.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}},{"Adjustment":false,"domain":"QBO","sparse":false,"Id":"6","SyncToken":"0","MetaData":{"CreateTime":"2021-01-31T12:11:06-08:00","LastUpdatedTime":"2021-01-31T12:11:06-08:00"},"TxnDate":"2021-01-19","CurrencyRef":{"value":"USD","name":"United States Dollar"},"PrivateNote":"Opening Balance","Line":[{"Id":"0","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Debit","AccountRef":{"value":"38","name":"Truck:Original Cost"}}},{"Id":"1","Description":"Opening Balance","Amount":13495.00,"DetailType":"JournalEntryLineDetail","JournalEntryLineDetail":{"PostingType":"Credit","AccountRef":{"value":"34","name":"Opening Balance Equity"}}}],"TxnTaxDetail":{}}],"startPosition":1,"maxResults":10,"totalCount":10},"time":"2021-04-11T12:05:29.915-07:00"}

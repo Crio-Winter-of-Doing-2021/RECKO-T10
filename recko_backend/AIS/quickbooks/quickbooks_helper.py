@@ -41,7 +41,10 @@ def constructUrl(token,realm_id,startposition,maxresults):
 def quickbooksDataEntry(response):
     for obj in response['QueryResponse']['JournalEntry']:
         list1 = []
+        extra={}
         date=obj['TxnDate']
+        extra['JournalID']=obj['Id']
+        extra['CurrencyRef']=obj['CurrencyRef']
         for journalLine in obj['Line']:
                 s1 = QNestedSerializer2(data=journalLine)
                 if s1.is_valid():
@@ -49,13 +52,21 @@ def quickbooksDataEntry(response):
                     accountName=journalLine['JournalEntryLineDetail']['AccountRef']['name']
                     accountType=journalLine['JournalEntryLineDetail']['PostingType']
                     amount=s1.data.get('Amount')
+                    extra['Description']=s1.data.get('Description')
+                    extra['DetailType']=s1.data.get('DetailType')
                     print("Date: ",date)
                     print("Account Id: ",accountId,"\n")
                     print("Account Name: ",accountName,"\n")
                     print("Account Type: ",accountType,"\n")
                     print("Amount: ",amount,"\n")
+                    print("Extra Fields",extra)
+                    extraField=json.dumps(extra, indent = 4)
                     if Accounts.objects.filter(accountName=accountName, accountId=accountId,amount=amount,date=date,accountType=accountType,providerName="Quickbooks").exists() is False:
-                        record=Accounts(accountName=accountName, accountId=accountId,amount=amount,date=date,accountType=accountType,providerName="Quickbooks")
+                        record=Accounts(accountName=accountName, accountId=accountId,amount=amount,date=date,accountType=accountType,providerName="Quickbooks",extraFields=extraField)
+                        record.save()
+                    else:
+                        record=Accounts.objects.filter(accountName=accountName, accountId=accountId,amount=amount,date=date,accountType=accountType,providerName="Quickbooks")[0]
+                        record.extraFields=extraField
                         record.save()
                 else:
                     print(s1.errors)

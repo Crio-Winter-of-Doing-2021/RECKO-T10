@@ -41,6 +41,7 @@ class QNestedSerializer1(serializers.Serializer):
     SyncToken=serializers.IntegerField()
     TxnDate=serializers.DateField()
     sparse=serializers.BooleanField()
+    CurrencyRef=serializers.JSONField()
     Line=QNestedSerializer2(many=True)
 
 

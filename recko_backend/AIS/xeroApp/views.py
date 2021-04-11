@@ -9,7 +9,7 @@ from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
-from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1, XNestedSerializer3
+from .serializers import EmptySerializer, XeroSerializer, XNestedSerializer1, XNestedSerializer3,XNestedSerializer4
 
 from django.core.cache import cache
 
@@ -146,7 +146,10 @@ def fetchXeroData(request):
             #print(serializer.data)
             xeroDataEntry(r)
         else:
-            print("ERROR")
+            print(serializer.errors)
+            template = loader.get_template("static/error.html")
+            return HttpResponse(template.render())
+        
         offset += 100
     msg="You can close this window now and login again!!"
     template = loader.get_template("static/redirectX.html")
