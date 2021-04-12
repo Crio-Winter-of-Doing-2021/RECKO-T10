@@ -33,31 +33,41 @@ function loop(data,str){
   for (i = 1; i <= data['sets']; i++) { 
     if(i==1){
           $(str).append(
-                `<option value="100">Latest 100</option>`
+                `
+                <a class="dropdown-item" onclick="load('','','','','','','',${0},${1000})">Latest 1000</a>
+                `
           );
 
       }else if(i==data['sets']){
         $(str).append(
-          `<option value="${c} - ${c+data['lastSet']-1}" id="last">${c} - ${c+data['lastSet']-1}</option>`
+          `
+          <a class="dropdown-item" onclick="load('','','','','','','',${c},${c+data['lastSet']-1})" id="last">${c} - ${c+data['lastSet']-1}</a>
+          `
     );
       }else{
         $(str).append(
-          `<option value="${c} - ${c+99}">${c} - ${c+99}</option>`
+          `<a class="dropdown-item" onclick="load('','','','','','','',${c},${c+999})" id="last">${c} - ${c+999}</a>`
         );
 
       }
-      c+=100;
+      c+=1000;
   }
 }
 
-$(document).on('change', 'select', function() {
-  console.log($(this).val()); // the selected options’s value
+//<option value="${c} - ${c+99}">${c} - ${c+99}</option>
+//<option value="${c} - ${c+data['lastSet']-1}" id="last">${c} - ${c+data['lastSet']-1}</option>
+
+
+/*$(document).on('change', 'select', function() {
+  //console.log($(this).val()); // the selected options’s value
 
   // if you want to do stuff based on the OPTION element:
   var opt = $(this).find('option:selected')[0];
   var set=$(this).val();
   
 });
+*/
+
 
 function totalRec(){
   var token = "Token ";
@@ -71,7 +81,7 @@ function totalRec(){
     url: "http://127.0.0.1:8000/getTotalRecs/",
     headers: { Authorization: authorization },
     success: function (data) {
-       console.log(data);
+       //console.log(data);
       loop(data,'#records');
     },
     error: function (response) {
@@ -92,7 +102,7 @@ window.onload = function(){
   }
   //$('#myModal').modal('show');
   totalRec();
-  load();
+  load('','','','','','','',0,1000);
 }
 
 
@@ -115,7 +125,7 @@ function logout() {
 
 /*                   CLIENT SIDE DATA FETCH AND PAGINATED DISPLAY                      */
 
-function load (a,b,c,d,e,f,g) {
+function load (a,b,c,d,e,f,g,i,j) {
   var token = "Token ";
   var token1 = sessionStorage.getItem("auth");
   var authorization = token.concat(token1);
@@ -132,6 +142,8 @@ function load (a,b,c,d,e,f,g) {
     "endAmt":e,
     "de":f,
     "cr":g,
+    "start":i,
+    "end":j
   };
   if(typeof(a)=="undefined"){
     body={
@@ -142,9 +154,11 @@ function load (a,b,c,d,e,f,g) {
       "endAmt":'',
       "de":'',
       "cr":'',
+      "start":i,
+      "end":j
     };
   }
-  console.log(body);
+  console.log(i+" "+j);
   $.ajax({
     type: "POST",
     url: "http://127.0.0.1:8000/transactions/",
@@ -181,12 +195,25 @@ var dateList=[];
           { data: "amount"},
           { data: "accountType"},
           { data: "date"},
+          { data: null,
+            render: function(data,type,row){
+              
+              var p=data['extraFields'];
+              
+              if(p!=null)
+              {console.log(typeof(p));}
+              
+              return (data['extraFields']);
+            }
+          }
         ],
         columnDefs: [
           { width: '60%', targets: 0 },
           { width: '100%', targets: 2 },
           { width: '100%', targets: 3 },
-          { width: '100%', targets: 4 }
+          { width: '100%', targets: 4 },
+          { width: '60%', targets: 5 },
+         
       ],
       dom: "<Bfrl<t>ip>",
       buttons: [
@@ -194,7 +221,7 @@ var dateList=[];
       ],
        initComplete: function () {
         var count = 0;
-        this.api().columns().every( function () {
+        this.api().columns([0,1,2,3,4]).every( function () {
             var title = this.header();
             //replace spaces with dashes
             title = $(title).html().replace(/[\W]/g, '-');
@@ -280,7 +307,7 @@ var dateList=[];
 
       // Update footer
       $( api.column( 2 ).footer() ).html(
-          '$'+pageTotal.toFixed(2) +' ( $'+ cr.toFixed(2) +' Cr)'+' ( $'+ dr.toFixed(2) +' De)'
+          'Net: '+pageTotal.toFixed(2) +'<br/> Credit:'+ cr.toFixed(2) +'<br/> Debit: '+ dr.toFixed(2)
       );
 
    
@@ -718,7 +745,7 @@ $( "#filterData" ).submit(function( event ) {
   console.log(de);
   console.log(cr);
   console.log(t);
-  load(accName,stD,endD,open,close,de,cr);
+  load(accName,stD,endD,open,close,de,cr,'','');
 
 });
 
@@ -728,5 +755,5 @@ $( "#filterData" ).submit(function( event ) {
 
 function clearForm(){
   document.getElementById('filterData').reset();
-  load();
+  load('','','','','','','',0,1000);
 }

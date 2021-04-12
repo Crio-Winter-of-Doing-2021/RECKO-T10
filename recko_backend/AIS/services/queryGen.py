@@ -62,12 +62,12 @@ User = get_user_model()
 
 dateformat='%Y-%m-%d'
 
-def queryset_generator(accName,openAmt,closeAmt,stDate,endDate,de,cr):
+def queryset_generator(accName,openAmt,closeAmt,stDate,endDate,de,cr,st,ed):
     #no filters set
     queryset=Accounts.objects.values('accountId','accountName','amount','date','accountType','providerName')
     if not accName and not openAmt and not closeAmt and not stDate and not endDate and not de and not cr:
         print("No filter set")
-        queryset=Accounts.objects.values('accountId','accountName','amount','date','accountType','providerName')
+        queryset=Accounts.objects.values('accountId','accountName','amount','date','accountType','providerName','extraFields').order_by('-date')[st:ed]
 
     if accName:
         print("filter acc set")

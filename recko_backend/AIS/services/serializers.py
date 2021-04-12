@@ -18,7 +18,7 @@ class EmptySerializer(serializers.ModelSerializer):
 class DataSerializer(serializers.ModelSerializer):
     class Meta:
         model=Accounts
-        fields=('accountId','accountName','amount','date','accountType','providerName')
+        fields=('accountId','accountName','amount','date','accountType','providerName','extraFields')
     
 
 

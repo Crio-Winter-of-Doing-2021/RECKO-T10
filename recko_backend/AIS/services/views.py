@@ -93,8 +93,11 @@ class TransactionViewSet(viewsets.GenericViewSet):
         endDate=request.data['endDate']
         de=request.data['de']
         cr=request.data['cr']
-
-        queryset=queryset_generator(accName,openAmt,closeAmt,stDate,endDate,de,cr)
+        start=int(request.data['start']) if request.data['start'] != '' else 0
+        end=int(request.data['end']) if request.data['end'] != '' else 0
+        print(start," ",end)
+        queryset=queryset_generator(accName,openAmt,closeAmt,stDate,endDate,de,cr,start,end)
+        print(len(queryset))
         serializer=DataSerializer(queryset,many=True)
         return Response(serializer.data,status.HTTP_200_OK)
 
@@ -111,10 +114,10 @@ class TransactionViewSet(viewsets.GenericViewSet):
         sets=1
         total=num1
         num2=num1
-        if num1%100==num1:
+        if num1%1000==num1:
             sets=1
         else:
-            cnt=divmod(num1, 100)           
+            cnt=divmod(num1, 1000)           
             sets=cnt[0] if cnt[1]==0 else cnt[0]+1
         return Response(data={"sets":sets,"totalRecords":total,"lastSet":cnt[1]},status=status.HTTP_200_OK)
 
