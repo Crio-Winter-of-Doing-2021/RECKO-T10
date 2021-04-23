@@ -10,7 +10,7 @@ function connectionUpdate(event) {
     if (offLine) {
      
       document.getElementById("connectionStatus").innerHTML =
-        "<br><span class='btn btn-outline-success' id='statusOnline'>You are back online...</span>";
+        "<br><span class='btn btn-outline-success' id='statusOnline'><img src='assets/online.png' width='40' height='30'>&nbsp;You are back online...</span>";
       setTimeout(function () {
         $("#statusOnline").fadeOut("slow");
       }, 2000);
@@ -19,7 +19,7 @@ function connectionUpdate(event) {
   } else {
     
     document.getElementById("connectionStatus").innerHTML =
-      "<br><span class='btn btn-outline-danger'> <i class='fas fa-cloud'></i>Oops!! You are offline!You cannot make any request to the server now!</span>";
+      "<br><span class='btn btn-outline-danger'><img src='assets/cloud-offline.png' height='30' width='30'>&nbsp;Oops!! You are offline!You cannot make any request to the server now!</span>";
       offLine = !offLine;
   }
 }
